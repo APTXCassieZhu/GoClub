@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="C:/Gradle/gs-accessing-data-jpa/initial" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-accessing-data-mysql/initial" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-gradle-master/gs-gradle-master/complete" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-managing-transactions/complete" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-managing-transactions/initial" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-messaging-stomp-websocket/complete" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-messaging-stomp-websocket/initial" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-rest-service/complete" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-securing-web/initial" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-serving-web-content/complete" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-spring-boot/complete" value="PREVIEW" />
+        <entry key="C:/Gradle/gs-spring-boot/initial" value="PREVIEW" />
+        <entry key="C:/Gradle/test1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../308/Tutorial/SpringBoot/gs-spring-boot/complete" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../308/gs-handling-form-submission/complete" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../308/gs-serving-web-content/complete" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../308/hw1/Game/demo" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../FinalProject308/PrussianBlue_COTUBE.COM" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../dddd/prussian_blue_hw1-master/JottoProject" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../prussian_blue_hw1-master/JottoProject" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="584" />
+    <option name="y" value="191" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555811680224" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
