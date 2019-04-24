@@ -30,4 +30,9 @@ public class mainController {
     String profile(){
         return "profile";
     }
+
+    @RequestMapping(value={"map.html"})
+    String map(){
+        return "map";
+    }
 }
