@@ -5,13 +5,34 @@
     <title>UpperBar Page</title>
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
-    <link rel="stylesheet" href="../css/style_RS.css">
-    <script src="../js/jump_functions.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/jump_function.js"></script>
+
+    <div class="topnav">
+        <!-- <a onclick="gohome();">Home</a>
+        <a onclick="window.location.href='map.html'">Map</ a>
+        <a onclick="window.location.href='report.html'">Report</ a>
+        <a onclick="window.location.href='batch.html'">Batch</ a>
+        <a class="active" onclick="window.location.href='register.html'">About</ a>
+        <input type="image" class="user-icon" onclick="goprofile()" src="../img/wolfie.png" /> -->
+    <a onclick="gohome()">Home</ a>
+    <a onclick="window.location.href='map.html'">Map</ a>
+    <a onclick="window.location.href='report.html'">Report</ a>
+    <a onclick="window.location.href='batch.html'">Batch</ a>
+    <a class="active" onclick="window.location.href='about.html'">About</ a>
+    <input type="image" class="user-icon" id="login_out" src="../img/profile.png" />
+    <input type="image" src = "../img/create.png" id="create" onclick="goCreate();">    
+</div>
+
+
+
+
+
 </head>
 
 
 <body style="margin-top:0px;">
-    <div id = "upper-bar" >
+    <!-- <div id = "upper-bar" >
         <div class="regbar">
             <div class = "regbar-mid">
                 <img src="../img/logo.png" id="logo-img" onclick="gohome()">                
@@ -20,7 +41,7 @@
                 <img src = "../img/wolfie.png" id="profile-pic" onclick="goprofile()">
             </div>
         </div>            
-    </div>
+    </div> -->
 
 </body>
 </html>

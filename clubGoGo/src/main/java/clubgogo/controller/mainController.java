@@ -26,4 +26,8 @@ public class mainController {
         return "upperbar";
     }
 
+    @RequestMapping(value={"profile.html"})
+    String profile(){
+        return "profile";
+    }
 }
