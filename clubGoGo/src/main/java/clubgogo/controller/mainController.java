@@ -21,4 +21,9 @@ public class mainController {
         return "register";
     }
 
+    @RequestMapping(value={"upperbar.html"})
+    String upperbar(){
+        return "upperbar";
+    }
+
 }
