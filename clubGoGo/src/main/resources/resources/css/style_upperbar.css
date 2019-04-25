@@ -6,6 +6,7 @@
   padding: 0;
   color: white;
   background-image: url(https://www.stonybrook.edu/far-beyond/img/branding/rays/rays-vertical-1.jpg);
+  background-size: cover;
 }
 
 .topnav a {

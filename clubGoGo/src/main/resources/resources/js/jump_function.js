@@ -12,6 +12,7 @@ function gologin(){
 
 function gologout(){
 
+    gohome();
 }
 
 function goabout(){
