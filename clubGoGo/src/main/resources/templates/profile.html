@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
     <link rel="stylesheet" href="../css/style_upperbar.css">
     <script src="../js/jump_function.js"></script>
+    <script src="../js/profile.js"></script>
 
     <link rel="stylesheet" href="../css/style_profile.css">
     <link rel="stylesheet" href="../css/style_button.css">
@@ -44,15 +45,27 @@
     <div id="change-password-popup" class="modal">
         <div class="modal-content">
             <span id="x" class="close">&times;</span>
-            <span style="font-size:20px; line-height:200%; cursor:default;"></span>
             <table class="change-password-table" id="changeTable">
                 <tr>
-                    <label class="control-label">Old Password:</label>
-                    <input type="text" id="user_username" class="form-control" name="user_username" autofocus/>
+                    <td><label class="control-label">Old Password:</label></td>
+                    <td><input type="text" id="old-password" class="form-control" name="old-password" autofocus/></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">New Password:</label></td>
+                    <td><input type="text" id="new-password" class="form-control" name="new-password" autofocus/></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Confirm Password:</label></td>
+                    <td><input type="text" id="confirm-password" class="form-control" name="confirm-password" autofocus/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="kwbtn kwbtn2" id="submit-change" onclick="changepassword()">Submit</button></td>
                 </tr>
             </table>
-            <h4 id="change_error1" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">Please Input Name of List.</h4>
-            <h4 id="change_error2" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">Please Select At Least One List.</h4>
+            <h4 id="change_error1" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">Incorrect Old Password.</h4>
+            <h4 id="change_error2" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Doesn't Match.</h4>
+            <h4 id="change_error3" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Cannot Be Empty.</h4>
         </div>
     </div>            
     <script>
@@ -60,6 +73,9 @@
         var btn = document.getElementById("change-password");
         btn.onclick = function() {
             modal.style.display = "block";
+            document.getElementById("change_error1").style.display = "none";
+            document.getElementById("change_error2").style.display = "none";
+            document.getElementById("change_error3").style.display = "none";
         }
         var x = document.getElementById("x");
         x.onclick = function() {
