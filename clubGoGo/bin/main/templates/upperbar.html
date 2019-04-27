@@ -3,24 +3,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>UpperBar Page</title>
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
-    <link rel="stylesheet" href="../css/style_RS.css">
-    <script src="../js/jump_functions.js"></script>
+    <link rel="stylesheet" href="../css/style_upperbar.css">
+    <script src="../js/jump_function.js"></script>
+
+    <div class="topnav">
+        <a onclick="gohome()">Home</a>
+        <a class="active" onclick="goabout()">About</a>
+        <span id="login_icon" onclick="gologin()" class="glyphicon glyphicon-log-in user-icon" style="font-size: 43px;border-radius: 50%;"></span>
+        <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon" style="font-size: 43px;border-radius: 50%;"></span>
+        <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
+        <input id="logout_img" type="image" class="user-icon user-icon1"  src="../img/profile.png" />
+    </div>
+
+
+
+
+
 </head>
 
 
-<body style="margin-top:0px;">
-    <div id = "upper-bar" >
-        <div class="regbar">
-            <div class = "regbar-mid">
-                <img src="../img/logo.png" id="logo-img" onclick="gohome()">                
-            </div>
-            <div class = "regbar-right">
-                <img src = "../img/wolfie.png" id="profile-pic" onclick="goprofile()">
-            </div>
-        </div>            
-    </div>
+<body>
 
 </body>
 </html>

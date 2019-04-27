@@ -1,0 +1,46 @@
+
+
+.topnav {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-image: url(https://www.stonybrook.edu/far-beyond/img/branding/rays/rays-vertical-1.jpg);
+  background-size: cover;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.topnav a:hover {
+  background-color: black;
+}
+
+.topnav a.active {
+  background-color:#70587c;
+  color: white;
+}
+
+.user-icon{
+  float:right;
+  cursor:pointer;
+  border:none;
+  width:48px;
+  height:48px;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+
+.user-icon1{
+  border-radius: 50%;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+}
