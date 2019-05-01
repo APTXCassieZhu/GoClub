@@ -2,6 +2,7 @@ function changepassword(){
     document.getElementById("change_error1").style.display = "none";
     document.getElementById("change_error2").style.display = "none";
     document.getElementById("change_error3").style.display = "none";
+    $.cookie('username', "user1");
     var old = document.getElementById("old-password").value;
     var new1 = document.getElementById("new-password").value;
     var new2 = document.getElementById("confirm-password").value;
