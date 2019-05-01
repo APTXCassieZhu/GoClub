@@ -1,6 +1,5 @@
 body{
     margin: 0px;
-    background: url("../img/back.jpg");
 }
 
 /* login style */
@@ -12,6 +11,7 @@ body{
   align-items:center;
   padding:15px;
   background-image: url("../img/back.jpg");
+  background-size: cover;
 }
 
 .my-wrap-login {
@@ -35,7 +35,17 @@ body{
   line-height:1.2;text-align:center;
 }
 
-.my-container-login-btn{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;justify-content:center;padding-top:13px}
+.my-container-login-btn{
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding-top:13px
+}
+
 .my-login-btn{   
   background-size: 200% auto;
   background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
