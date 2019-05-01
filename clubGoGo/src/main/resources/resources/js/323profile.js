@@ -6,11 +6,17 @@ function changepassword(){
     var old = document.getElementById("old-password").value;
     var new1 = document.getElementById("new-password").value;
     var new2 = document.getElementById("confirm-password").value;
+    console.log(old);
+    console.log(new1);
+    console.log(new2);
     if(new1==""||new2==""){
+        console.log("111111111");
         document.getElementById("change_error3").style.display = "block";
     }else if(new1!=new2){
+        console.log("222222222");
         document.getElementById("change_error2").style.display = "block";
-    }else{
+    }else{        
+        console.log("333333333");
         $.ajax({
             url: "profile.html/change_password",
             type: "post",
