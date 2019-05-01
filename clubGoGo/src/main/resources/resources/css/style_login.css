@@ -1,13 +1,9 @@
 body{
     margin: 0px;
-    background-image: url("../img/back.jpg");
+    background-image: url("../img/bg.png");
     background-size: cover;
 }
-.login-shadow{
-  background-color:red; 
-  opacity: 0.5; 
-  z-index: 20
-}
+
 /* login style */
 .my-container-login{
   width:100%;
@@ -16,7 +12,6 @@ body{
   justify-content:center;
   align-items:center;
   padding:15px;
-  opacity: 1;
   z-index:30
 }
 
@@ -32,7 +27,14 @@ body{
   box-shadow:0 5px 10px 0 rgba(0,0,0,.1);-moz-box-shadow:0 5px 10px 0 rgba(0,0,0,.1);-webkit-box-shadow:0 5px 10px 0 rgba(0,0,0,.1);-o-box-shadow:0 5px 10px 0 rgba(0,0,0,.1);-ms-box-shadow:0 5px 10px 0 rgba(0,0,0,.1)
 }
 
-.my-wrap-login-input{width:100%;position:relative;border-bottom:2px solid #adadad;margin-bottom:37px}
+.my-wrap-login-input{
+  width:100%;
+  position:relative;
+  border-bottom:2px solid #adadad;
+  margin-bottom:37px;
+  opacity: 1;
+  z-index:30;
+}
 .my-login-input{
   border-style:none;
   width:100%;
