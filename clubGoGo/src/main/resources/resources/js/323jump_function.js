@@ -18,3 +18,12 @@ function gologout(){
 function goabout(){
     
 }
+
+function gosearchresult() {
+    var word = document.getElementById("search_word").value;
+    $.cookie('search_word',word);
+    if(word!=""){
+        // document.location.href="./search_result.html";  
+        
+    } 
+}

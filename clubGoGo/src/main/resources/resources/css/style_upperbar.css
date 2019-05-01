@@ -1,5 +1,3 @@
-
-
 .topnav {
   overflow: hidden;
   margin: 0;
@@ -7,6 +5,7 @@
   color: white;
   background-image: url(https://www.stonybrook.edu/far-beyond/img/branding/rays/rays-vertical-1.jpg);
   background-size: cover;
+  text-align: center;
 }
 
 .topnav a {
@@ -43,4 +42,17 @@
   border-color: white;
   border-width: 2px;
   border-style: solid;
+}
+
+.search_bar{
+  font-size: 15px;
+  border: none;
+  border-bottom: 2px solid beige;
+  background: transparent;
+  color: white;
+}
+
+.search_bar:focus{
+  border: none;
+  border-bottom: 2px solid beige;
 }

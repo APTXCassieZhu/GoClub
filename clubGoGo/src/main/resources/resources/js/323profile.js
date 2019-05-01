@@ -10,15 +10,12 @@ function changepassword(){
     console.log(new1);
     console.log(new2);
     if(new1==""){
-        console.log("111111111");
         document.getElementById("change_error3").style.display = "table-row";
     }
     if(new1!=new2){
-        console.log("222222222");
         document.getElementById("change_error2").style.display = "table-row";
     }
     if(new1==new2&&new1!=""){        
-        console.log("333333333");
         $.ajax({
             url: "profile.html/change_password",
             type: "post",
