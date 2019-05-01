@@ -1,5 +1,5 @@
 function gohome(){
-    document.location.href="./index.html";
+    document.location.href="./home.html";
 }
 
 function goprofile(){

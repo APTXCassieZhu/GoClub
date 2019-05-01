@@ -9,8 +9,21 @@
         <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
         integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
         crossorigin=""></script>
+        <script src="../js/323jump_function.js"></script>
         <link rel="stylesheet" href="../css/style_button.css">
+        <link rel="stylesheet" href="../css/style_upperbar.css">
+        <link rel="stylesheet" href="../css/style_home.css">
     </head>
+    <header>
+        <div class="topnav">
+            <a class="active" onclick="gohome()">Home</a>
+            <a onclick="goabout()">About</a>
+            <input type="text" class="search_bar" name="search_word" id="search_word" size="35" placeholder="Input for searching...">
+            <input type="image" src = "../img/search.png" onclick="gosearchresult()"/>
+            <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon"></span>
+            <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
+        </div>
+    </header>
     <body>
         <div class="map-content">
             <div id="map"></div>
