@@ -2,14 +2,20 @@ function changepassword(){
     document.getElementById("change_error1").style.display = "none";
     document.getElementById("change_error2").style.display = "none";
     document.getElementById("change_error3").style.display = "none";
+    $.cookie('username', "user1");
     var old = document.getElementById("old-password").value;
     var new1 = document.getElementById("new-password").value;
     var new2 = document.getElementById("confirm-password").value;
-    if(new1==""||new2==""){
-        document.getElementById("change_error3").style.display = "block";
-    }else if(new1!=new2){
-        document.getElementById("change_error2").style.display = "block";
-    }else{
+    console.log(old);
+    console.log(new1);
+    console.log(new2);
+    if(new1==""){
+        document.getElementById("change_error3").style.display = "table-row";
+    }
+    if(new1!=new2){
+        document.getElementById("change_error2").style.display = "table-row";
+    }
+    if(new1==new2&&new1!=""){        
         $.ajax({
             url: "profile.html/change_password",
             type: "post",
@@ -19,7 +25,7 @@ function changepassword(){
                 if(data==0){
                     document.getElementById('change-password-popup').style.display = "none";
                 }else if(data==1){
-                    document.getElementById("change_error1").style.display = "block";
+                    document.getElementById("change_error1").style.display = "table-row";
                 }
             }
         });
