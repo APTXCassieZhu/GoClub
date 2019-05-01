@@ -1,14 +1,15 @@
 // initialize the map
-var mymap = L.map('map').setView([40.912400, -73.123400], 35);
+var mymap = L.map('map').setView([40.912400, -73.123400], 1);
 // load a tile layer(worldwide)
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
-    maxZoom: 18,
+    maxZoom: 100,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.light'
 }).addTo(map);
 
+// add marker to the map
 var sac_marker = L.marker([40.914445, -73.124199]).addTo(mymap);
 var mathTower_marker = L.marker([40.91574, -73.126296]).addTo(mymap);
 var wangCenter_marker = L.marker([40.916025, -73.119544]).addTo(mymap);
