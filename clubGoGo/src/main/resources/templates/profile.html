@@ -49,24 +49,30 @@
             <table class="change-password-table" id="changeTable">
                 <tr>
                     <td><label class="control-label">Old Password:</label></td>
-                    <td><input type="text" id="old-password" class="form-control" name="old-password" autofocus/></td>
+                    <td><input type="password" id="old-password" class="form-control" name="old-password" autofocus/></td>
                 </tr>
                 <tr>
                     <td><label class="control-label">New Password:</label></td>
-                    <td><input type="text" id="new-password" class="form-control" name="new-password" autofocus/></td>
+                    <td><input type="password" id="new-password" class="form-control" name="new-password" autofocus/></td>
                 </tr>
                 <tr>
                     <td><label class="control-label">Confirm Password:</label></td>
-                    <td><input type="text" id="confirm-password" class="form-control" name="confirm-password" autofocus/></td>
+                    <td><input type="password" id="confirm-password" class="form-control" name="confirm-password" autofocus/></td>
+                </tr>
+                <tr id="change_error1" style="display:none">
+                    <td colspan="2"><h4 style="color:red;margin-left:20px;font-weight: 300;cursor:default">Incorrect Old Password.</h4></td>
+                </tr>
+                <tr id="change_error2" style="display:none">
+                    <td colspan="2"><h4 style="color:red;margin-left:20px;font-weight: 300;cursor:default">New Password Doesn't Match.</h4></td>
+                </tr>
+                <tr id="change_error3" style="display:none">
+                    <td colspan="2"><h4 style="color:red;margin-left:20px;font-weight: 300;cursor:default">New Password Cannot Be Empty.</h4></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td><button class="kwbtn kwbtn2" id="submit-change" onclick="changepassword();">Submit</button></td>
                 </tr>
             </table>
-            <h4 id="change_error1" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">Incorrect Old Password.</h4>
-            <h4 id="change_error2" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Doesn't Match.</h4>
-            <h4 id="change_error3" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Cannot Be Empty.</h4>
         </div>
     </div>            
     <script>
@@ -74,6 +80,9 @@
         var btn = document.getElementById("change-password");
         btn.onclick = function() {
             modal.style.display = "block";
+            document.getElementById("old-password").value = "";
+            document.getElementById("new-password").value = "";
+            document.getElementById("confirm-password").value = "";
             document.getElementById("change_error1").style.display = "none";
             document.getElementById("change_error2").style.display = "none";
             document.getElementById("change_error3").style.display = "none";
