@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-image: url("../img/bg.png");
+    background-image: url("../img/323bg.png");
     background-size: cover;
 }
 
@@ -19,7 +19,7 @@ body{
   width:390px;
   overflow:hidden;
   border-style: solid;
-  border-color:#7392B7; 
+  border-color:#7392B7;
   border-radius:10px;
   padding:30px ;
   z-index:30;
