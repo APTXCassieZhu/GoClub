@@ -167,8 +167,9 @@ var buildingLayer = L.geoJSON(buildings, {}).addTo(map);
 
 // add marker to the map
 var sac_marker = L.marker([40.914445, -73.124199],
-    {title: "Student Activities Center"}).addTo(map).on('mouseover', callByMarker); //function(e) {
-        //info.update("Student Activities Center")});
+    {title: "Student Activities Center"}).addTo(map).on('mouseover', callByMarker(sac_marker)); //function(e) {
+        info.update("Student Activities Center")});
+sac_marker.on('mouseover', callByMarker(sac_marker));
 var mathTower_marker = L.marker([40.91574, -73.126296],
     {title: "Math Tower"}).addTo(map).on('mouseover', function(e) {
         info.update("Math Tower")});
@@ -220,12 +221,6 @@ info.update = function (props) {
 
 info.addTo(map);
 
-function callByMarker(marker) {
-    var title = marker.options.title;
-    info.update(title);
-}
-
-sac_marker.callByMarker(sac_marker);
 
 // highlight selected building
 /*var _mouseDownPoint = null;
