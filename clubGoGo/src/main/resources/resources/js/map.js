@@ -4,15 +4,176 @@ var map = L.Wrld.map('map', '6e24c243ce23799c3c5e8e2ae9f06b72', {
     zoom: 16
   });
 
+var buildings = [{
+    "type": "Feature",
+    "properties": {"name": "Student Activities Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.914445, -73.124199],
+            [40.914445, -73.124199],
+            [40.914445, -73.124199],
+            [40.914445, -73.124199],
+            [40.914445, -73.124199]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Math Tower"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.91574, -73.126296],
+            [40.91574, -73.126296],
+            [40.91574, -73.126296],
+            [40.91574, -73.126296],
+            [40.91574, -73.126296]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Wang Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.916025, -73.119544],
+            [40.916025, -73.119544],
+            [40.916025, -73.119544],
+            [40.916025, -73.119544],
+            [40.916025, -73.119544]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Melville Library"},           // ?????????????
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.915571, -73.122745],
+            [40.915571, -73.122745],
+            [40.915571, -73.122745],
+            [40.915571, -73.122745],
+            [40.915571, -73.122745]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "LDS Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.919681, -73.118468],
+            [40.919681, -73.118468],
+            [40.919681, -73.118468],
+            [40.919681, -73.118468],
+            [40.919681, -73.118468]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "GLS Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.912302, -73.129882],
+            [40.912302, -73.129882],
+            [40.912302, -73.129882],
+            [40.912302, -73.129882],
+            [40.912302, -73.129882]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Tabler Activities Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.909979, -73.127083],
+            [40.909979, -73.127083],
+            [40.909979, -73.127083],
+            [40.909979, -73.127083],
+            [40.909979, -73.127083]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Campus Recreational Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.917611, -73.123272],
+            [40.917611, -73.123272],
+            [40.917611, -73.123272],
+            [40.917611, -73.123272],
+            [40.917611, -73.123272]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Staller Center"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.915985, -73.121045],
+            [40.915985, -73.121045],
+            [40.915985, -73.121045],
+            [40.915985, -73.121045],
+            [40.915985, -73.121045]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "New Computer Science"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.912896, -73.123244],
+            [40.912896, -73.123244],
+            [40.912896, -73.123244],
+            [40.912896, -73.123244],
+            [40.912896, -73.123244]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Earth and Space Sciences"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.91487, -73.125378],
+            [40.91487, -73.125378],
+            [40.91487, -73.125378],
+            [40.91487, -73.125378],
+            [40.91487, -73.125378]
+        ]]
+    }
+}, {
+    "type": "Feature",
+    "properties": {"name": "Harriman Hall"},
+    "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+            [40.915957, -73.125296],
+            [40.915957, -73.125296],
+            [40.915957, -73.125296],
+            [40.915957, -73.125296],
+            [40.915957, -73.125296]
+        ]]
+    }
+}];
+
+var buildingLayer = L.geoJSON(buildings, {}).addTo(map);
+
+
 // add marker to the map
 var sac_marker = L.marker([40.914445, -73.124199],
     {title: "Student Activities Center"}).addTo(map).on('mouseover', onClick);;
 var mathTower_marker = L.marker([40.91574, -73.126296],
     {title: "Math Tower"}).addTo(map).on('mouseover', onClick);;
 var wangCenter_marker = L.marker([40.916025, -73.119544],
-    {title: "Melville Library"}).addTo(map).on('mouseover', onClick);;
-var library_marker = L.marker([40.915571, -73.122745],
     {title: "Wang Center"}).addTo(map).on('mouseover', onClick);;
+var library_marker = L.marker([40.915571, -73.122745],
+    {title: "Melville Library"}).addTo(map).on('mouseover', onClick);;
 var lds_marker = L.marker([40.919681, -73.118468],
     {title: "LDS Center"}).addTo(map).on('mouseover', onClick);;
 var gls_marker = L.marker([40.912302, -73.129882],
@@ -49,7 +210,8 @@ info.addTo(map);
 
 // update info
 function onClick(e) {
-    info.update(this.getTitle());
+    var layer = e.target;
+    info.update(layer.feature.properties);
 }
 
 // highlight selected building
