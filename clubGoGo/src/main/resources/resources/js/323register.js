@@ -6,7 +6,7 @@ $(document).ready(function(){
         }
         var register_data = { username: $('#name').val() , password: $('#pwd').val() };
         e.preventDefault();
-        console.log(register_data.userEmail," ",register_data.password)
+        console.log(register_data.username," ",register_data.password)
         $.ajax({
             type: 'post',
             url: '/user/register',
