@@ -19,8 +19,8 @@
     <div class="topnav">
         <a onclick="gohome()">Home</a>
         <a onclick="goabout()">About</a>
-        <input type="text" class="search_bar" style="font-size:15px;border:none;border-bottom:2px solid beige;background:transparent;color: white;" name="search_word" id="search_word" size="35" placeholder="Input for searching...">
-        <input type="image" src = "../img/search.png" style = "margin-right:3px; width:35px; height:35px" onclick="gosearchresult()"/>
+        <input type="text" class="search_bar" name="search_word" id="search_word" size="35" placeholder="Input for searching...">
+        <input type="image" src = "../img/search.png" class="search-img" onclick="gosearchresult()"/>
         <!-- <span id="login_icon" onclick="gologin()" class="glyphicon glyphicon-log-in user-icon" style="font-size: 43px;border-radius: 50%;"></span> -->
         <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon" style="font-size: 43px;border-radius: 50%;"></span>
         <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
@@ -40,9 +40,6 @@
             <button class="kwbtn kwbtn2" id="log-out"  onclick="gologout()">Log Out</button>
         </div>
     </div>
-
-
-
 
 
     <div id="change-password-popup" class="modal">
@@ -102,5 +99,52 @@
 
 
 </div>
+
+<div class="profile-page-lower">
+    <hr class="hr1">
+    <div class="favorite-bar">
+        <span class="span1">Favorite List</span>
+        <div id="favorite-sortby">
+            <select class="sortBy" id="sort-by" name="sort_by" onchange = "favoritePage(1);">
+                <option value="sortby">Sort By</option>
+                <option value="name">Name</option>
+                <option value="latest">Latest</option>
+                <option value="event">Event</option>
+            </select>
+        </div>
+    </div>
+    <br><br>
+    <hr class="hr1">
+    <br>
+    <div>
+        <table id="favorite-table" class="favorite-table">
+            <tr>
+                <th style="width:5vw">
+                    <span>No.</span>
+                </th>
+                <th>
+                    <span>clubname</span>
+                </th>
+                <th>
+                    <span>Next Event</span>
+                </th>
+                <th>
+                    <span>Contact Info</span>
+                </th>
+            </tr>
+        </table>
+        <div class="pageTurn" style="text-align: center; font-size: 15px" id="divpage">
+            <ul class="pagination" id="authorpageturn">
+                <li>1</li>
+                <li>2</li>
+            </ul>
+
+        </div>
+    </div>
+    <script>
+        showfavorite();
+    </script>
+</div>
+
 </body>
 </html>

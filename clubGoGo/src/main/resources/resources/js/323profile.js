@@ -31,3 +31,38 @@ function changepassword(){
         });
     }
 }
+
+function showfavorite(){
+    var username = $.cookie('username');
+    if(username!=""){
+        document.getElementById("user-name").innerText = "Hi, " + username;
+    }
+    favoritePage(1);
+}
+
+function favoritePage(page){
+    var selector = document.getElementById("sort-by");
+    var option = selector.options[selector.selectedIndex].value;
+    var choice;
+
+    if (option == "sortby"){
+        choice = "1";
+    }
+    else if(option == "name"){
+        choice = "2";
+    }
+    else if(option == "latest"){
+        choice = "3";
+    }
+    else if(option == "event"){
+        choice = "4";
+    }
+    $.ajax({
+        url: "profile.html/favorite",
+        type: "post",
+        async: false,
+        data: {username: $.cookie('username'), sorted: choice, page:page},
+        success: function (data) {
+        }
+    });
+}

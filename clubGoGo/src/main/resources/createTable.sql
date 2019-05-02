@@ -18,6 +18,7 @@ CREATE TABLE club (
 CREATE TABLE favorite (
 	username VARCHAR(255),
     clubname VARCHAR(255),
+    follow_time DATETIME,
     PRIMARY KEY (username, clubname),
 	FOREIGN KEY (username) REFERENCES user (username)
 		ON DELETE NO ACTION
