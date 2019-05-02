@@ -9,8 +9,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
     <link rel="stylesheet" href="../css/style_upperbar.css">
-    <script src="../js/jump_function.js"></script>
-    <script src="../js/profile.js"></script>
+    <script src="../js/323jump_function.js"></script>
+    <script src="../js/323profile.js"></script>
+    <script src="../js/323js.cookie.js"></script>
 
     <link rel="stylesheet" href="../css/style_profile.css">
     <link rel="stylesheet" href="../css/style_button.css">
@@ -18,6 +19,8 @@
     <div class="topnav">
         <a onclick="gohome()">Home</a>
         <a onclick="goabout()">About</a>
+        <input type="text" class="search_bar" name="search_word" id="search_word" size="35" placeholder="Input for searching...">
+        <input type="image" src = "../img/search.png" class="search-img" onclick="gosearchresult()"/>
         <!-- <span id="login_icon" onclick="gologin()" class="glyphicon glyphicon-log-in user-icon" style="font-size: 43px;border-radius: 50%;"></span> -->
         <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon" style="font-size: 43px;border-radius: 50%;"></span>
         <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
@@ -39,33 +42,36 @@
     </div>
 
 
-
-
-
     <div id="change-password-popup" class="modal">
         <div class="modal-content">
             <span id="x" class="close">&times;</span>
             <table class="change-password-table" id="changeTable">
                 <tr>
                     <td><label class="control-label">Old Password:</label></td>
-                    <td><input type="text" id="old-password" class="form-control" name="old-password" autofocus/></td>
+                    <td><input type="password" id="old-password" class="form-control" name="old-password" autofocus/></td>
                 </tr>
                 <tr>
                     <td><label class="control-label">New Password:</label></td>
-                    <td><input type="text" id="new-password" class="form-control" name="new-password" autofocus/></td>
+                    <td><input type="password" id="new-password" class="form-control" name="new-password" autofocus/></td>
                 </tr>
                 <tr>
                     <td><label class="control-label">Confirm Password:</label></td>
-                    <td><input type="text" id="confirm-password" class="form-control" name="confirm-password" autofocus/></td>
+                    <td><input type="password" id="confirm-password" class="form-control" name="confirm-password" autofocus/></td>
+                </tr>
+                <tr id="change_error1" style="display:none">
+                    <td colspan="2"><h4 style="color:red;margin-left:20px;font-weight: 300;cursor:default">Incorrect Old Password.</h4></td>
+                </tr>
+                <tr id="change_error2" style="display:none">
+                    <td colspan="2"><h4 style="color:red;margin-left:20px;font-weight: 300;cursor:default">New Password Doesn't Match.</h4></td>
+                </tr>
+                <tr id="change_error3" style="display:none">
+                    <td colspan="2"><h4 style="color:red;margin-left:20px;font-weight: 300;cursor:default">New Password Cannot Be Empty.</h4></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button class="kwbtn kwbtn2" id="submit-change" onclick="changepassword()">Submit</button></td>
+                    <td><button class="kwbtn kwbtn2" id="submit-change" onclick="changepassword();">Submit</button></td>
                 </tr>
             </table>
-            <h4 id="change_error1" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">Incorrect Old Password.</h4>
-            <h4 id="change_error2" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Doesn't Match.</h4>
-            <h4 id="change_error3" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Cannot Be Empty.</h4>
         </div>
     </div>            
     <script>
@@ -73,6 +79,9 @@
         var btn = document.getElementById("change-password");
         btn.onclick = function() {
             modal.style.display = "block";
+            document.getElementById("old-password").value = "";
+            document.getElementById("new-password").value = "";
+            document.getElementById("confirm-password").value = "";
             document.getElementById("change_error1").style.display = "none";
             document.getElementById("change_error2").style.display = "none";
             document.getElementById("change_error3").style.display = "none";
@@ -90,5 +99,52 @@
 
 
 </div>
+
+<div class="profile-page-lower">
+    <hr class="hr1">
+    <div class="favorite-bar">
+        <span class="span1">Favorite List</span>
+        <div id="favorite-sortby">
+            <select class="sortBy" id="sort-by" name="sort_by" onchange = "favoritePage(1);">
+                <option value="sortby">Sort By</option>
+                <option value="name">Name</option>
+                <option value="latest">Latest</option>
+                <option value="event">Event</option>
+            </select>
+        </div>
+    </div>
+    <br><br>
+    <hr class="hr1">
+    <br>
+    <div>
+        <table id="favorite-table" class="favorite-table">
+            <tr>
+                <th style="width:5vw">
+                    <span>No.</span>
+                </th>
+                <th>
+                    <span>clubname</span>
+                </th>
+                <th>
+                    <span>Next Event</span>
+                </th>
+                <th>
+                    <span>Contact Info</span>
+                </th>
+            </tr>
+        </table>
+        <div class="pageTurn" style="text-align: center; font-size: 15px" id="divpage">
+            <ul class="pagination" id="favoritepageturn">
+                <li>1</li>
+                <li>2</li>
+            </ul>
+
+        </div>
+    </div>
+    <script>
+        showfavorite();
+    </script>
+</div>
+
 </body>
 </html>
