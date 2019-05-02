@@ -11,13 +11,15 @@
         <link rel="stylesheet" href="../css/style_home.css">
     </head>
     <header>
-        <div class="topnav">
-            <a class="active" onclick="gohome()">Home</a>
-            <a onclick="goabout()">About</a>
-            <input type="text" class="search_bar" name="search_word" id="search_word" size="35" placeholder="Input for searching...">
-            <input type="image" src = "../img/search.png" onclick="gosearchresult()"/>
-            <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon"></span>
+        <div class="topnav" style="text-align:center;">
+            <a onclick="gohome()">Home</a>
+            <a class="active" onclick="goabout()">About</a>
+            <input type="text" class="search_bar" style="font-size:15px;border:none;border-bottom:2px solid beige;background:transparent;color: white;" name="search_word" id="search_word" size="35" placeholder="Input for searching...">
+            <input type="image" src = "../img/search.png" class="search-img" onclick="gosearchresult()"/>
+            <span id="login_icon" onclick="gologin()" class="glyphicon glyphicon-log-in user-icon" style="font-size: 43px;border-radius: 50%;"></span>
+            <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon" style="font-size: 43px;border-radius: 50%;"></span>
             <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
+            <input id="logout_img" type="image" class="user-icon user-icon1"  src="../img/profile.png" />
         </div>
     </header>
     <body>
