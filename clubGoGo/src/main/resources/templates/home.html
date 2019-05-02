@@ -9,6 +9,7 @@
         <script src="https://cdn-webgl.wrld3d.com/wrldjs/dist/latest/wrld.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
         <script src="../js/323jump_function.js"></script>
+        <script src="../js/323js.cookie.js"></script>
         <link rel="stylesheet" href="../css/style_button.css">
         <link rel="stylesheet" href="../css/style_upperbar.css">
         <link rel="stylesheet" href="../css/style_home.css">
@@ -31,4 +32,14 @@
             <script src = "../js/map.js"></script>
         </div>
     </body>
+    <script>
+        var username = $.cookie('username');
+        if(username==""||username==undefined){
+            document.getElementById("logout_icon").style.display = "none";
+            document.getElementById("login_img").style.display = "none";
+        }else{            
+            document.getElementById("login_icon").style.display = "none";
+            document.getElementById("logout_img").style.display = "none";
+        }
+    </script>
 </html>
