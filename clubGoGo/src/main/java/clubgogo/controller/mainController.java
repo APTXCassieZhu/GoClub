@@ -35,4 +35,9 @@ public class mainController {
     String contact(){
         return "contact";
     }
+
+    @RequestMapping(value={"searchResult.html"})
+    String searchResult(){
+        return "searchResult";
+    }
 }

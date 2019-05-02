@@ -11,7 +11,6 @@ function gologin(){
 }
 
 function gologout(){
-
     gohome();
 }
 
@@ -22,8 +21,9 @@ function goabout(){
 function gosearchresult() {
     var word = document.getElementById("search_word").value;
     $.cookie('search_word',word);
+    console.log("word:" + word);
     if(word!=""){
-        // document.location.href="./search_result.html";  
+        document.location.href="./searchResult.html";  
         
     } 
 }
