@@ -40,4 +40,9 @@ public class mainController {
     String searchResult(){
         return "searchResult";
     }
+
+    @RequestMapping(value={"clubDetail.html"})
+    String clubDetail(){
+        return "clubDetail";
+    }
 }
