@@ -25,6 +25,5 @@ function gosearchresult() {
     console.log("word:" + word);
     if(word!=""){
         document.location.href="./searchResult.html";  
-        
     } 
 }
