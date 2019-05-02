@@ -10,7 +10,7 @@ CREATE TABLE user (
     
 CREATE TABLE club (
     clubname VARCHAR(255) ,
-    clubdescription VARCHAR(10000) NOT NULL ,
+    clubdescription TEXT NOT NULL ,
     #club INTEGER NOT NULL, #Number corresponds to which question VARCHAR(1000) NOT NULL,
     #security_answer VARCHAR(1000) NOT NULL,
     PRIMARY KEY (clubname) );
