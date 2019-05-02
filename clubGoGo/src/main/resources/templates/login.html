@@ -1,7 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="../css/style_login.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="../js/323login.js"></script>   
     </head>
     <body>
         <div class="my-container-login" id="myForm">
@@ -10,20 +11,20 @@
                 <img src="../img/login.png">
             </div>
             <br>
-            <form action>
+            <form id="login" action>
                 <div class="my-wrap-login-input">
-                    <input type = "text" name = "username" placeholder="Username" class="my-login-input"><br>
+                    <input id="name" type = "text" name = "username" placeholder="Username" class="my-login-input"><br>
                 </div>
                 <div class="my-wrap-login-input">
-                    <input type = "password" name = "pwd" placeholder="Password" class="my-login-input"><br>
+                    <input id="pwd" type = "password" name = "pwd" placeholder="Password" class="my-login-input"><br>
                 </div>
             </form>
             <div class="my-container-login-btn">
-            <button onclick="window.location.href='main.html'" class="my-login-btn">Login </button>
+            <button onclick="window.location.replace('/home')" class="my-login-btn">Login </button>
             </div>
             <br>
             <div class="text-center">Don't have an account?
-                <a onclick="window.location.href='register.html'"><u>Sign Up</u></a>
+                <a onclick="window.location.replace('/register')"><u>Sign Up</u></a>
             </div>
         </div>
         </div>

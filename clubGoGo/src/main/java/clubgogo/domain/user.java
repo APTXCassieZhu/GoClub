@@ -3,7 +3,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "account")
-public class user {
+public class User {
 
     @Id
     private String username;
@@ -11,11 +11,11 @@ public class user {
     private Integer security_question;
     private String security_answer;
 
-    public user(){
+    public User(){
 
     }
 
-    public user(String username, String password, Integer security_question, String security_answer) {
+    public User(String username, String password, Integer security_question, String security_answer) {
         this.username = username;
         this.password = password;
         this.security_question = security_question;
@@ -56,7 +56,7 @@ public class user {
 
     @Override
     public String toString() {
-        return "user{" +
+        return "User{" +
                 " username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", security_question='" + security_question + '\'' +

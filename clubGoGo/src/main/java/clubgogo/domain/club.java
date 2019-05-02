@@ -3,7 +3,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "account")
-public class club {
+public class Club {
 
     @Id
     private String clubname;
@@ -16,11 +16,11 @@ public class club {
     // private String event_time;
     // private String event_name;
 
-    public club(){
+    public Club(){
 
     }
 
-    public club(String clubname, String logopath, Integer security_question, String security_answer, String description, String email) {
+    public Club(String clubname, String logopath, Integer security_question, String security_answer, String description, String email) {
         this.clubname = clubname;
         this.logopath = logopath;
         this.security_question = security_question;
