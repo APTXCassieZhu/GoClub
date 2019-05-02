@@ -11,6 +11,7 @@ function gologin(){
 }
 
 function gologout(){
+    $.cookie('username', "");
     gohome();
 }
 
