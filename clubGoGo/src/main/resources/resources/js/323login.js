@@ -2,7 +2,7 @@ $(document).ready(function(){
     var login_form = $("#login");
     login_form.submit( function(e) {
         var login_data = { username: $('#name').val(), password: $('#pwd').val() };
-        console.log(login_data.userEmail," ",login_data.password)
+        console.log(login_data.username," ",login_data.password)
         e.preventDefault();
         $.ajax({
             type: 'post',
@@ -17,6 +17,7 @@ $(document).ready(function(){
                 if(data.status == 'error'){
                     alert(data.error);
                 } else {
+                    $.cookie('username', login_data.username);
                     window.location.replace("/home");
                     console.log(data);
                 }

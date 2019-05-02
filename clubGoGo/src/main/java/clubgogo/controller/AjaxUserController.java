@@ -21,6 +21,7 @@ public class AjaxUserController {
 
     @PostMapping(value = "/login", produces = "application/json")
     public User login(@RequestBody User user, HttpSession session) {
+        
         return user;
     }
 }

@@ -3,7 +3,7 @@ package clubgogo.domain;
 
 // @Entity
 // @Table(name = "event")
-public class event {
+public class Event {
 
     // @Id
     // private String clubname;
@@ -11,10 +11,10 @@ public class event {
     private String event_name;
     private String event_time;
 
-    public event(){
+    public Event(){
     }
 
-    public event(String event_location, String event_name, String event_time){
+    public Event(String event_location, String event_name, String event_time){
         this.event_location = event_location;
         this.event_name = event_name;
         this.event_time = event_time;
