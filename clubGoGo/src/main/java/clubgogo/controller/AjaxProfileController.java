@@ -23,4 +23,15 @@ public class AjaxProfileController {
         }
         return 0;
     }
+
+    @RequestMapping(value="/favorite",method = RequestMethod.POST)
+    @ResponseBody
+    public String favorite(HttpServletRequest request){
+        String username = request.getParameter("username");
+        String sortMethod = request.getParameter("sorted");
+        String pagenum1 = request.getParameter("page");
+        int pagenum = Integer.parseInt(pagenum1);
+        System.out.println(username + "\t" + sortMethod + "\t" + pagenum);
+        return "";
+    }
 }
