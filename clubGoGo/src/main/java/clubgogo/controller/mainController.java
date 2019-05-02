@@ -31,8 +31,8 @@ public class mainController {
         return "profile";
     }
 
-    @RequestMapping(value={"map.html"})
-    String map(){
-        return "map";
+    @RequestMapping(value={"contact.html"})
+    String contact(){
+        return "contact";
     }
 }

@@ -1,0 +1,94 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>Profile Page</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+    <link rel="stylesheet" href="../css/style_upperbar.css">
+    <script src="../js/jump_function.js"></script>
+    <script src="../js/profile.js"></script>
+
+    <link rel="stylesheet" href="../css/style_profile.css">
+    <link rel="stylesheet" href="../css/style_button.css">
+
+    <div class="topnav">
+        <a onclick="gohome()">Home</a>
+        <a onclick="goabout()">About</a>
+        <!-- <span id="login_icon" onclick="gologin()" class="glyphicon glyphicon-log-in user-icon" style="font-size: 43px;border-radius: 50%;"></span> -->
+        <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon" style="font-size: 43px;border-radius: 50%;"></span>
+        <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
+        <!-- <input id="logout_img" type="image" class="user-icon user-icon1"  src="../img/profile.png" /> -->
+    </div>
+</head>
+<body>
+
+<div class="profile-page-upper">
+    <div class="user-info">
+        <div>
+            <img src="../img/wolfie.png" class="profile-img">
+        </div>
+        <div class="user-info-detail">
+            <span id="user-name">Hi, xxxxx</span><br>
+            <button class="kwbtn kwbtn2" id="change-password">Change Password</button>
+            <button class="kwbtn kwbtn2" id="log-out"  onclick="gologout()">Log Out</button>
+        </div>
+    </div>
+
+
+
+
+
+    <div id="change-password-popup" class="modal">
+        <div class="modal-content">
+            <span id="x" class="close">&times;</span>
+            <table class="change-password-table" id="changeTable">
+                <tr>
+                    <td><label class="control-label">Old Password:</label></td>
+                    <td><input type="text" id="old-password" class="form-control" name="old-password" autofocus/></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">New Password:</label></td>
+                    <td><input type="text" id="new-password" class="form-control" name="new-password" autofocus/></td>
+                </tr>
+                <tr>
+                    <td><label class="control-label">Confirm Password:</label></td>
+                    <td><input type="text" id="confirm-password" class="form-control" name="confirm-password" autofocus/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button class="kwbtn kwbtn2" id="submit-change" onclick="changepassword()">Submit</button></td>
+                </tr>
+            </table>
+            <h4 id="change_error1" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">Incorrect Old Password.</h4>
+            <h4 id="change_error2" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Doesn't Match.</h4>
+            <h4 id="change_error3" style="color:red;display:none;margin-left:20px;font-weight: 300;cursor:default">New Password Cannot Be Empty.</h4>
+        </div>
+    </div>            
+    <script>
+        var modal = document.getElementById('change-password-popup');
+        var btn = document.getElementById("change-password");
+        btn.onclick = function() {
+            modal.style.display = "block";
+            document.getElementById("change_error1").style.display = "none";
+            document.getElementById("change_error2").style.display = "none";
+            document.getElementById("change_error3").style.display = "none";
+        }
+        var x = document.getElementById("x");
+        x.onclick = function() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</div>
+</body>
+</html>
