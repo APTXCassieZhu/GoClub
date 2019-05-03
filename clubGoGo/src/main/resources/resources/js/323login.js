@@ -1,24 +1,21 @@
 $(document).ready(function(){
     var login_form = $("#login");
     login_form.submit( function(e) {
-        var login_data = { username: $('#name').val(), password: $('#pwd').val() };
-        console.log(login_data.username," ",login_data.password)
         e.preventDefault();
         $.ajax({
             type: 'post',
             url: '/user/login',
-            contentType:"application/json; charset=utf-8",
             headers: {
-                Accept: "application/json; charset=utf-8"
+                Accept: "*/*"
             },
-            data: JSON.stringify(login_data),
-            dataType:"json",
+            async: false,
+            data: { username: $('#name').val(), password: $('#pwd').val() },
             success: function (data){
-                if(data.status == 'error'){
-                    alert(data.error);
+                if(data == null){
+                    alert("Password or username is incorrect.");
                 } else {
-                    $.cookie('username', login_data.username);
-                    window.location.replace("/home");
+                    $.cookie('username', $('#name').val());
+                    document.location.href("/home.html")
                     console.log(data);
                 }
             }
