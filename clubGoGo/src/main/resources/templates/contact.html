@@ -26,16 +26,30 @@
 </head>
 
 <body>
-    <h1 style="font-size:28px">Contact Club Manager</h1>
-    <div class="contact-form-container">
-        <form id="contact">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="text" id="email" placeholder="Email address" required>
-            <input type="text" id="subject" placeholder="Subject" required>
-            <input type="text" id="content" placeholder="Content">
-            <input type="submit" class="kwbtn kwbtn2">
-        </form>
+    <div class="my-container-contact">
+        <div class="my-wrap-contact"> 
+            <form id="contact" action>
+                <h1 class="contact-title">Contact Club Manager</h1>
+                <br>
+                <div class="my-wrap-contact-input">
+                    <input id="name" type = "text" name = "name" placeholder="Name" class="my-contact-input" required><br>
+                </div>
+                <div class="my-wrap-contact-input">
+                    <input id="email" type = "text" name = "email" placeholder="Email address" class="my-contact-input" required><br>
+                </div>
+                <div class="my-wrap-contact-input">
+                    <input id="subject" type = "text" name = "subject" placeholder="Subject" class="my-contact-input" required><br>
+                </div>
+                <div class="my-wrap-contact-input">
+                    <input id="content" type = "text" name = "content" class="email-content" placeholder="Content" class="my-contact-input"><br>
+                </div>
+                <div class="my-container-contact-btn">
+                    <button class="kwbtn kwbtn2" type="submit">Send email </button>
+                </div>
+            </form>
+        </div>
     </div>
+   
     <script>
         var username = $.cookie('username');
         if(username==""||username==undefined){
