@@ -8,8 +8,6 @@ public class Club {
     @Id
     private String clubname;
     private String logopath;
-    private Integer security_question;
-    private String security_answer;
     private String description;
     private String email;
     // private String event_location;
@@ -20,11 +18,9 @@ public class Club {
 
     }
 
-    public Club(String clubname, String logopath, Integer security_question, String security_answer, String description, String email) {
+    public Club(String clubname, String logopath,String description, String email) {
         this.clubname = clubname;
         this.logopath = logopath;
-        this.security_question = security_question;
-        this.security_answer = security_answer;
         this.description = description;
         this.email = email;
     }
@@ -43,22 +39,6 @@ public class Club {
 
     public void setLogopath(String logopath) {
         this.logopath = logopath;
-    }
-
-    public Integer getSecurity_question() {
-        return security_question;
-    }
-
-    public void setSecurity_question(Integer security_question) {
-        this.security_question = security_question;
-    }
-
-    public String getSecurity_answer() {
-        return security_answer;
-    }
-
-    public void setSecurity_answer(String security_answer) {
-        this.security_answer = security_answer;
     }
 
     public String getDescription() {
@@ -82,8 +62,6 @@ public class Club {
         return "club{" +
                 " clubname='" + clubname + '\'' +
                 ", logopath='" + logopath + '\'' +
-                ", security_question='" + security_question + '\'' +
-                ", security_answer='" + security_answer + '\'' +
                 ", description='" + description + '\'' +
                 ", email='" + email + '\'' +
                 '}';

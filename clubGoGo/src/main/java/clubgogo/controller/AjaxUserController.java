@@ -3,25 +3,29 @@ package clubgogo.controller;
 import clubgogo.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller  
 @RequestMapping(value="/user")
 public class AjaxUserController {
 
-    @PostMapping(value = "/register", produces = "application/json")
-    public User createUser(@RequestBody User user, HttpSession session) {
+    @RequestMapping(value="/register", method = RequestMethod.POST)
+    @ResponseBody
+    public User createUser(HttpServletRequest request){
+        System.out.println(request.toString());
+        User user = new User(request.getParameter("username"),request.getParameter("password"));
         // TO DO save the user to db
         //userRepository.save(user);
+        System.out.println(user.getUsername());
         return user;
     }
-
-    @PostMapping(value = "/login", produces = "application/json")
-    public User login(@RequestBody User user, HttpSession session) {
-        
+    @RequestMapping(value="/login", method = RequestMethod.POST)
+    @ResponseBody
+    public User login(HttpServletRequest request, HttpSession session) {
+        User user = new User(request.getParameter("username"),request.getParameter("password"));
         return user;
     }
 }
