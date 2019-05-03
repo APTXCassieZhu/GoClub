@@ -64,7 +64,7 @@ body{
 }
 
 .email-content {
-    height: 350px;
+    height: 300px;
     overflow: auto;
     text-align: center;
 }

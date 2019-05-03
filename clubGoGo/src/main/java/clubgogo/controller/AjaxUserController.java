@@ -35,6 +35,7 @@ public class AjaxUserController {
             return null;
         }    
     }
+
     @RequestMapping(value="/login", method = RequestMethod.POST)
     @ResponseBody
     public Clubuser login(HttpServletRequest request, HttpSession session) {
@@ -54,5 +55,12 @@ public class AjaxUserController {
                 return currentUser.get();
             }        
         }
+    }
+
+    @RequestMapping(value="/email", method = RequestMethod.POST)
+    @ResponseBody
+    public String sendEmail(HttpServletRequest request, HttpSession session) {
+        return "\nDear "+request.getParameter("name")+
+        ", your email has been sent to the "+request.getParameter("club")+"\'s manager." ;
     }
 }
