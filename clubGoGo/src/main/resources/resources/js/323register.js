@@ -14,11 +14,14 @@ $(document).ready(function(){
             headers: {
                 Accept: "*/*"
             },
-            async: false,
             data: { username: $('#name').val() , password: $('#pwd').val() },
             success: function (data){
-                console.log(data);
-                document.location.href("/login.html")
+                console.log('data: ',data);
+                if(data == ""){
+                    alert("\nUsername exists, please try another.");
+                } else{
+                    window.location.href="/login.html";
+                }
             }
         })
     })

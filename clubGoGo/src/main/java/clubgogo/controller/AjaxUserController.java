@@ -25,10 +25,15 @@ public class AjaxUserController {
     public Clubuser createUser(HttpServletRequest request){
         System.out.println(request.toString());
         Clubuser user = new Clubuser(request.getParameter("username"),request.getParameter("password"));
-        // save the user to db
-        userRepository.save(user);
-        System.out.println(user.getUsername());
-        return user;
+        // check if user exists
+        Optional<Clubuser> currentUser = userRepository.findByUsername(user.getUsername());
+        if(!currentUser.isPresent()){
+            // save the user to db
+            userRepository.save(user);
+            return user;
+        }else{
+            return null;
+        }    
     }
     @RequestMapping(value="/login", method = RequestMethod.POST)
     @ResponseBody
@@ -36,10 +41,18 @@ public class AjaxUserController {
         Clubuser user = new Clubuser(request.getParameter("username"),request.getParameter("password"));
         Optional<Clubuser> currentUser = userRepository.findByUsername(user.getUsername());
         // check whether the user exists
-        if(currentUser.isPresent()){
+        if(!currentUser.isPresent()){
+            System.out.println("User doesn't exist.");
             return null;
         } else {
-            return currentUser.get();
+            // check password
+            if(!currentUser.get().getPassword().equals(user.getPassword())){
+                System.out.println("Password is incorrect");
+                return null;
+            } else{
+                System.out.println("login success");
+                return currentUser.get();
+            }        
         }
     }
 }

@@ -8,15 +8,15 @@ $(document).ready(function(){
             headers: {
                 Accept: "*/*"
             },
-            async: false,
             data: { username: $('#name').val(), password: $('#pwd').val() },
             success: function (data){
-                if(data == null){
-                    alert("Password or username is incorrect.");
+                console.log('data: ',data);
+                if(data == ""){
+                    alert("\nPassword or username is incorrect.");
                 } else {
                     $.cookie('username', $('#name').val());
-                    document.location.href("/home.html")
-                    console.log(data);
+                    console.log("Current user is ",$.cookie('username'));
+                    window.location.href="/home.html";
                 }
             }
         })
