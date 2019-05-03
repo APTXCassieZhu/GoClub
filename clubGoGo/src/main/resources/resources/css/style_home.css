@@ -24,7 +24,7 @@
   }
 
   .leaflet-popup-content-wrapper{
-    padding: 6px 8px;
+    padding: 6px 6px;
     font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
     background: rgba(255,255,255,0.8);
