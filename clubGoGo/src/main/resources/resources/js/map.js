@@ -215,10 +215,44 @@ info.onAdd = function (map) {
 info.update = function (props) {
     this._div.innerHTML = '<h4>SBU</h4>' +  (props ?
         '<b>Building Name: ' + props
-        : 'Click your target building');
+        : 'Click your target building to view events in that building');
 };
 
 info.addTo(map);
+
+// set popup style
+var popupStyle = {
+    'className' : 'popupCustom'
+}
+// define club event
+var sac_popup = "<b>Club event in SAC</b><br>";
+var mathTower_popup = "<b>Club event in Math Tower</b><br>";
+var wangCenter_popup = "<b>Club event in Wang Center</b><br>";
+var library_popup = "<b>Club event in Melville Library</b><br>";
+var lds_popup = "<b>Club event in LDS Center</b><br>";
+var gls_popup = "<b>Club event in GLS Center</b><br>";
+var tac_popup = "<b>Club event in Tabler Activities Center</b><br>";
+var crc_popup = "<b>Club event in Campus Recreational Center</b><br>";
+var staller_popup = "<b>Club event in Staller Center</b><br>";
+var ncs_popup = "<b>Club event in New Computer Science</b><br>";
+var ess_popup = "<b>Club event in Earth and Space Sciences</b><br>";
+var harriman_popup = "<b>Club event in Harriman Hall</b>"+
+"<br>General Body Meeting@<a onclick'>American Marketing Association</a>";
+
+// add club event into map
+sac_marker.bindPopup(sac_popup, popupStyle).openPopup();
+mathTower_marker.bindPopup(mathTower_popup, popupStyle).openPopup();
+wangCenter_marker.bindPopup(wangCenter_popup, popupStyle).openPopup();
+library_marker.bindPopup(library_popup, popupStyle).openPopup();
+lds_marker.bindPopup(lds_popup, popupStyle).openPopup();
+gls_marker.bindPopup(gls_popup, popupStyle).openPopup();
+tac_marker.bindPopup(tac_popup, popupStyle).openPopup();
+crc_marker.bindPopup(crc_popup, popupStyle).openPopup();
+staller_marker.bindPopup(staller_popup, popupStyle).openPopup();
+ncs_marker.bindPopup(ncs_popup, popupStyle).openPopup();
+ess_marker.bindPopup(ess_popup, popupStyle).openPopup();
+harriman_marker.bindPopup(harriman_popup, popupStyle).openPopup();
+
 
 
 // highlight selected building
