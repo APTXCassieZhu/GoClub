@@ -2,7 +2,7 @@ package clubgogo.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "account")
+@Table(name = "Club")
 public class Club {
 
     @Id

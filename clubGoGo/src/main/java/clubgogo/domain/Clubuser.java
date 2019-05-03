@@ -2,17 +2,17 @@ package clubgogo.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "account")
-public class User {
+@Table(name = "Clubuser")
+public class Clubuser {
 
     @Id
     private String username;
     private String password;
 
-    public User(){
+    public Clubuser(){
     }
 
-    public User(String username, String password) {
+    public Clubuser(String username, String password) {
         this.username = username;
         this.password = password;
     }

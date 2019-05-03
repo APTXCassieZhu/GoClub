@@ -1,8 +1,7 @@
 package clubgogo.domain;
 // import javax.persistence.*;
-
-// @Entity
-// @Table(name = "event")
+//@Entity
+//@Table(name = "Event")
 public class Event {
 
     // @Id
