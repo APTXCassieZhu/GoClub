@@ -60,6 +60,7 @@
     </div>
 
     <script>
+        console.log($.cookie('clubname'));
         var username = $.cookie('username');
         if(username==""||username==undefined){
             document.getElementById("logout_icon").style.display = "none";
