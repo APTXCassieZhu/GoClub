@@ -220,19 +220,64 @@ info.update = function (props) {
 
 info.addTo(map);
 
-
 // define club event
-var sac_popup = "<b>Club event in SAC</b><br>";
+var sac_popup = "<b>Club event in SAC</b>"+
+"<br>11:30 Lobby Bake Sale@<a onclick=\"jumpToClub('Dance Team')\"><u>Dance Team</u></a>"+
+"<br>12:00 Room311 Dementor-A-Thon@<a onclick=\"jumpToClub('Dumbledore's Army')\"><u>Dumbledore's Army</u></a>"+
+"<br>12:30 Lobby SBU Junoon Bake Sale@<a onclick=\"jumpToClub('SBU Junoon')\"><u>SBU Junoon</u></a>"+
+"<br>17:00 Room304 General Body Meeting @<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
+"<br>17:30 SEA Presents: Last Night Out@<a onclick=\"jumpToClub('Undergraduate Social Welfare Alliance')\"><u>Undergraduate Social Welfare Alliance</u></a>"+
+"<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
+"<br>18:30 Room304 Krispy Kreme Fundraiser@<a onclick=\"jumpToClub('Watsi')\"><u>Watsi</u></a>"+
+"<br>19:00 BallroomA Casino Royale Semi-Formal@<a onclick=\"jumpToClub('Asian Students Alliance')\"><u>Asian Students Alliance</u></a>"+
+"<br>19:00 Room306 Peking Duck Bao Night@<a onclick=\"jumpToClub('Cantonese Club')\"><u>Cantonese Club</u></a>"+
+"<br>19:00 BallroomB JNight@<a onclick=\"jumpToClub('Japanese Student Organization')\"><u>Japanese Student Organization</u></a>"+
+"<br>19:00 Room311 Capoeira Class@<a onclick=\"jumpToClub('Capoeira Club')\"><u>Capoeira Club</u></a>"+
+"<br>20:00 Room302 General Body Meeting@<a onclick=\"jumpToClub('Carribean Student Organization')\"><u>Carribean Student Organization</u></a>"+
+"<br>20:00 Room307 General Body Meeting@<a onclick=\"jumpToClub('SBU-TV')\"><u>SBU-TV</u></a>"+
+"<br>21:00 Room305 Phi Iota Alpha Fraternity Movie Night@<a onclick=\"jumpToClub('MALK Fraternity, Inc.')\"><u>MALK Fraternity, Inc.</u></a>"+
+"<br>";
 var mathTower_popup = "<b>Club event in Math Tower</b><br>";
-var wangCenter_popup = "<b>Club event in Wang Center</b><br>";
-var library_popup = "<b>Club event in Melville Library</b><br>";
-var lds_popup = "<b>Club event in LDS Center</b><br>";
-var gls_popup = "<b>Club event in GLS Center</b><br>";
-var tac_popup = "<b>Club event in Tabler Activities Center</b><br>";
-var crc_popup = "<b>Club event in Campus Recreational Center</b><br>";
-var staller_popup = "<b>Club event in Staller Center</b><br>";
-var ncs_popup = "<b>Club event in New Computer Science</b><br>";
-var ess_popup = "<b>Club event in Earth and Space Sciences</b><br>";
+var wangCenter_popup = "<b>Club event in Wang Center</b>"+
+"<br>13:00 The Chinese Exclusion Act@<a onclick=\"jumpToClub('Charles B. Wang Center')\"><u>Charles B. Wang Center</u></a>"+
+"<br>";
+var library_popup = "<b>Club event in Melville Library</b>"+
+"<br>18:00 N5580 General Body Meeting@<a onclick=\"jumpToClub('Jewish Student Association')\"><u>Jewish Student Association</u></a>"+
+"<br>18:30 N4006 Socialist Reading Group: What is to be Done? Burning Questions of Our Movement@<a onclick=\"jumpToClub('Young Democratic Socialists of Stony Brook University (Formerly Coalition of University Students for Progress or CUSP)')\"><u>Young Democratic Socialists of Stony Brook University (Formerly Coalition of University Students for Progress or CUSP)</u></a>"+
+"<br>19:00 N3063 General Body Meeting@<a onclick=\"jumpToClub('The Play it Forward Project')\"><u>The Play it Forward Project</u></a>"+
+"<br>19:00 E4320 General Body Meeting@<a onclick=\"jumpToClub('Peer Mental Health Alliance')\"><u>Peer Mental Health Alliance</u></a>"+
+"<br>19:00 N5560 General Body Meeting@<a onclick=\"jumpToClub('Newman Club')\"><u>Newman Club</u></a>"+
+"<br>";
+var lds_popup = "<b>Club event in LDS Center</b>"+
+"<br>19:00 General Body Meeting@<a onclick=\"jumpToClub('CASB Dance Team')\"><u>CASB Dance Team</u></a>"+
+"<br>20:00 SAYAW@<a onclick=\"jumpToClub('Philippine United Student Organization')\"><u>Philippine United Student Organization</u></a>"+
+"<br>";
+var gls_popup = "<b>Club event in GLS Center</b>"+
+"<br>12:00 Battle of the Brook@<a onclick=\"jumpToClub('League of Legends Club')\"><u>League of Legends Club</u></a>"+
+"<br>13:00 The Beauty Bar@<a onclick=\"jumpToClub('Hairitage')\"><u>Hairitage</u></a>"+
+"<br>19:00 Spirit of Saigon@<a onclick=\"jumpToClub('Vietnamese Student Association')\"><u>Vietnamese Student Association</u></a>"+
+"<br>20:00 Kompa Night@<a onclick=\"jumpToClub('Haitian Student Organization')\"><u>Haitian Student Organization</u></a>"+
+"<br>";
+var tac_popup = "<b>Club event in Tabler Activities Center</b>"+
+"<br>12:00 Chinese Drama Fair@<a onclick=\"jumpToClub('Chinese Association at Stony Brook')\"><u>Chinese Association at Stony Brook</u></a>"+
+"<br>19:00 Spring Final Concert@<a onclick=\"jumpToClub('Vocalists')\"><u>Vocalists</u></a>"+
+"<br>19:30 NPHC Open House@<a onclick=\"jumpToClub('National Pan-Hallenic Council')\"><u>National Pan-Hallenic Council</u></a>"+
+"<br>20:00 Spring Invitational@<a onclick=\"jumpToClub('Stony Brook Pipettes')\"><u>Stony Brook Pipettes</u></a>"+
+"<br>";
+var crc_popup = "<b>Club event in Campus Recreational Center</b>"+
+"<br>17:00 Belly Dance Workshop@<a onclick=\"jumpToClub('Belly Dance')\"><u>Belly Dance</u></a>"+
+"<br>17:00 Practice@<a onclick=\"jumpToClub('Kumdo Club')\"><u>Kumdo Club</u></a>"+
+"<br>";
+var staller_popup = "<b>Club event in Staller Center</b>"+
+"<br>19:30 University Orchestra@<a onclick=\"jumpToClub('Stony Brook Broadway Orchestra')\"><u>Stony Brook Broadway Orchestra</u></a>"+
+"<br>";
+var ncs_popup = "<b>Club event in New Computer Science</b>"+
+"<br>15:00 General Body Meeting@<a onclick=\"jumpToClub('WPhD Computer Science')\"><u>WPhD Computer Science</u></a>"+
+"<br>";
+var ess_popup = "<b>Club event in Earth and Space Sciences</b>"+
+"<br>17:00 General Body Meeting@<a onclick=\"jumpToClub('Earth and Planetary Science Club')\"><u>Earth and Planetary Science Club</u></a>"+
+"<br>19:00 Room101 General Body Meeting@<a onclick=\"jumpToClub('Photography Club')\"><u>Photography Club</u></a>"+
+"<br>";
 var harriman_popup = "<b>Club event in Harriman Hall</b>"+
 "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
 "<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
