@@ -12,6 +12,9 @@ public class Favorite {
     private String clubname;
     private Date follow_time;
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long favorite_id;
+
     public Favorite(){
 
     }
