@@ -18,14 +18,15 @@ public class Club {
 
     }
 
-    public Club(String clubname, String logopath,String description, String email, String event_location, String event_time, String event_name) {
+    public Club(String clubname, String logopath, String description, 
+    String email, String event_location, String event_time, String event_name) {
         this.clubname = clubname;
         this.logopath = logopath;
         this.description = description;
         this.email = email;
         this.event_location = event_location;
-        this.event_time = event_time;
-        this.event_name = event_name;
+        this.event_location = event_time;
+        this.event_location = event_name;    
     }
 
     public String getClubname() {
@@ -91,6 +92,9 @@ public class Club {
                 ", logopath='" + logopath + '\'' +
                 ", description='" + description + '\'' +
                 ", email='" + email + '\'' +
+                ", event_location='" + event_location + '\'' +
+                ", event_name='" + event_name + '\'' +
+                ", event_time='" + event_time + '\'' +
                 '}';
     }
 
