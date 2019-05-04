@@ -273,47 +273,87 @@ function mapInit() {
     map.removeLayer(ncs_marker);
     map.removeLayer(ess_marker);
     map.removeLayer(harriman_marker);
-
-
 }
 
 // click select button
 function academic(){
     mapInit();
+    harriman_marker.addTo(map);
+    ess_marker.addTo(map);
+    ncs_marker.addTo(map);
 }
 function culture(){
-
+    mapInit();
+    sac_marker.addTo(map);
+    crc_marker.addTo(map);
+    tac_marker.addTo(map);
+    gls_marker.addTo(map);
+    lds_marker.addTo(map);
+    library_marker.addTo(map);
+    wangCenter_marker.addTo(map);
 }
 function fraternity(){
-
+    mapInit();
+    tac_marker.addTo(map);
 }
 function media(){
-
+    mapInit();
+    ess_marker.addTo(map);
+    sac_marker.addTo(map);
+    staller_marker.addTo(map);
+    library_marker.addTo(map);
 }
 function performance(){
-
+    mapInit();
+    lds_marker.addTo(map);
+    sac_marker.addTo(map);
+    tac_marker.addTo(map);
+    library_marker.addTo(map);
 }
 function activism(){
-
+    mapInit();
+    sac_marker.addTo(map);
 }
 function religion(){
-
+    mapInit();
+    sac_marker.addTo(map);
+    library_marker.addTo(map);
 }
 function leisure(){
-
+    mapInit();
+    harriman_marker.addTo(map);
+    gls_marker.addTo(map);
 }
 function service(){
-
+    mapInit();
+    harriman_marker.addTo(map);
+    library_marker.addTo(map);
 }
 function sport(){
-
+    mapInit();
+    sac_marker.addTo(map);
 }
 function select1(){
-
+    mapInit();
+    sac_marker.addTo(map);
+    gls_marker.addTo(map);
 }
 function select2(){
-
+    mapInit();
+    harriman_marker.addTo(map);
+    ess_marker.addTo(map);
+    ncs_marker.addTo(map);
+    crc_marker.addTo(map);
+    sac_marker.addTo(map);
+    library_marker.addTo(map);
 }
 function select3(){
-
+    mapInit();
+    sac_marker.addTo(map);
+    gls_marker.addTo(map);
+    library_marker.addTo(map);
+    lds_marker.addTo(map);
+    tac_marker.addTo(map);
+    ess_marker.addTo(map);
+    staller_marker.addTo(map);
 }
