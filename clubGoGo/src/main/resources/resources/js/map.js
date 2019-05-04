@@ -169,9 +169,6 @@ var buildingLayer = L.geoJSON(buildings, {}).addTo(map);
 var sac_marker = L.marker([40.914445, -73.124199],
     {title: "Student Activities Center"}).addTo(map).on('mouseover', function(e) {
         info.update("Student Activities Center")});
-var mathTower_marker = L.marker([40.91574, -73.126296],
-    {title: "Math Tower"}).addTo(map).on('mouseover', function(e) {
-        info.update("Math Tower")});
 var wangCenter_marker = L.marker([40.916025, -73.119544],
     {title: "Wang Center"}).addTo(map).on('mouseover', function(e) {
         info.update("Wang Center")});
@@ -224,7 +221,7 @@ info.addTo(map);
 var sac_popup = "<b>Club event in SAC</b>"+
 "<br>11:30 Lobby Bake Sale@<a onclick=\"jumpToClub('Dance Team')\"><u>Dance Team</u></a>"+
 "<br>12:00 Room311 Dementor-A-Thon@<a onclick=\"jumpToClub('Dumbledore's Army')\"><u>Dumbledore's Army</u></a>"+
-"<br>12:30 Lobby SBU Junoon Bake Sale@<a onclick=\"jumpToClub('SBU Junoon')\"><u>SBU Junoon</u></a>"+
+"<br>12:30 Lobby Bake Sale@<a onclick=\"jumpToClub('SBU Junoon')\"><u>SBU Junoon</u></a>"+
 "<br>17:00 Room304 General Body Meeting @<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
 "<br>17:30 SEA Presents: Last Night Out@<a onclick=\"jumpToClub('Undergraduate Social Welfare Alliance')\"><u>Undergraduate Social Welfare Alliance</u></a>"+
 "<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
@@ -237,7 +234,6 @@ var sac_popup = "<b>Club event in SAC</b>"+
 "<br>20:00 Room307 General Body Meeting@<a onclick=\"jumpToClub('SBU-TV')\"><u>SBU-TV</u></a>"+
 "<br>21:00 Room305 Phi Iota Alpha Fraternity Movie Night@<a onclick=\"jumpToClub('MALK Fraternity, Inc.')\"><u>MALK Fraternity, Inc.</u></a>"+
 "<br>";
-var mathTower_popup = "<b>Club event in Math Tower</b><br>";
 var wangCenter_popup = "<b>Club event in Wang Center</b>"+
 "<br>13:00 The Chinese Exclusion Act@<a onclick=\"jumpToClub('Charles B. Wang Center')\"><u>Charles B. Wang Center</u></a>"+
 "<br>";
@@ -292,7 +288,6 @@ function jumpToClub(str){
 
 // add club event into map
 sac_marker.bindPopup(sac_popup).openPopup();
-mathTower_marker.bindPopup(mathTower_popup).openPopup();
 wangCenter_marker.bindPopup(wangCenter_popup).openPopup();
 library_marker.bindPopup(library_popup).openPopup();
 lds_marker.bindPopup(lds_popup).openPopup();
@@ -306,9 +301,19 @@ harriman_marker.bindPopup(harriman_popup).openPopup();
 
 // remove markers
 function mapInit() {
-    map.removeLayer(sac_marker);
-    map.removeLayer(mathTower_marker);
-    map.removeLayer(wangCenter_marker);
+    sac_marker.update(sac_popup);
+    wangCenter_marker.update(wangCenter_popup);
+    library_marker.update(library_popup);
+    lds_marker.update(lds_popup);
+    gls_marker.update(gls_popup);
+    tac_marker.update(tac_popup);
+    crc_marker.update(crc_popup);
+    staller_marker.update(staller_popup);
+    ncs_marker.update(ncs_popup);
+    ess_marker.update(ess_popup);
+    harriman_marker.update(harriman_popup); 
+    map.removeLayer(sac_marker); 
+    map.removeLayer(wangCenter_marker); 
     map.removeLayer(library_marker);
     map.removeLayer(lds_marker);
     map.removeLayer(gls_marker);
@@ -326,6 +331,14 @@ function academic(){
     harriman_marker.addTo(map);
     ess_marker.addTo(map);
     ncs_marker.addTo(map);
+    var ess_popup1 = "<b>Club event in Earth and Space Sciences</b>"+
+    "<br>17:00 General Body Meeting@<a onclick=\"jumpToClub('Earth and Planetary Science Club')\"><u>Earth and Planetary Science Club</u></a>"+
+    "<br>";
+    var harriman_popup1 = "<b>Club event in Harriman Hall</b>"+
+    "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+    "<br>"; 
+    ess_marker.update(ess_popup1);
+    harriman_marker.update(harriman_popup1);
 }
 function culture(){
     mapInit();
@@ -381,7 +394,28 @@ function sport(){
 function select1(){
     mapInit();
     sac_marker.addTo(map);
+    tac_marker.addTo(map);
+    wangCenter_marker.addTo(map);
     gls_marker.addTo(map);
+    var sac_popup1 = "<b>Club event in SAC</b>"+
+    "<br>11:30 Lobby Bake Sale@<a onclick=\"jumpToClub('Dance Team')\"><u>Dance Team</u></a>"+
+    "<br>12:00 Room311 Dementor-A-Thon@<a onclick=\"jumpToClub('Dumbledore's Army')\"><u>Dumbledore's Army</u></a>"+
+    "<br>12:30 Lobby Bake Sale@<a onclick=\"jumpToClub('SBU Junoon')\"><u>SBU Junoon</u></a>"+
+    "<br>";
+    var wangCenter_popup1 = "<b>Club event in Wang Center</b>"+
+    "<br>13:00 The Chinese Exclusion Act@<a onclick=\"jumpToClub('Charles B. Wang Center')\"><u>Charles B. Wang Center</u></a>"+
+    "<br>";
+    var gls_popup1 = "<b>Club event in GLS Center</b>"+
+    "<br>12:00 Battle of the Brook@<a onclick=\"jumpToClub('League of Legends Club')\"><u>League of Legends Club</u></a>"+
+    "<br>13:00 The Beauty Bar@<a onclick=\"jumpToClub('Hairitage')\"><u>Hairitage</u></a>"+
+    "<br>";
+    var tac_popup1 = "<b>Club event in Tabler Activities Center</b>"+
+    "<br>12:00 Chinese Drama Fair@<a onclick=\"jumpToClub('Chinese Association at Stony Brook')\"><u>Chinese Association at Stony Brook</u></a>"+
+    "<br>";
+    sac_marker.update(sac_popup1);
+    tac_marker.update(tac_popup1);
+    wangCenter_marker.update(wangCenter_popup1);
+    gls_marker.update(gls_popup1);
 }
 function select2(){
     mapInit();
