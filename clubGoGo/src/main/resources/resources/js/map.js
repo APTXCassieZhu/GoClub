@@ -234,15 +234,15 @@ var staller_popup = "<b>Club event in Staller Center</b><br>";
 var ncs_popup = "<b>Club event in New Computer Science</b><br>";
 var ess_popup = "<b>Club event in Earth and Space Sciences</b><br>";
 var harriman_popup = "<b>Club event in Harriman Hall</b>"+
-//"<br>General Body Meeting@<a onclick=\"window.location.href='/clubDetail.html'\"><u>American Marketing Association</u></a>"+
-"<br>General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+"<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+"<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
+"<br>19:00 Room105 Project Sunshine@<a onclick=\"jumpToClub('Project Sunshine')\"><u>Project Sunshine</u></a>"+
 "<br>";
 
 function jumpToClub(str){
     console.log(str);
     $.cookie('clubname', str);
     window.location.href="/clubDetail.html";
-    //onclick='jumpToClub(\'American Marketing Association\')'
 }
 
 // add club event into map
@@ -259,3 +259,61 @@ ncs_marker.bindPopup(ncs_popup).openPopup();
 ess_marker.bindPopup(ess_popup).openPopup();
 harriman_marker.bindPopup(harriman_popup).openPopup();
 
+// remove markers
+function mapInit() {
+    map.removeLayer(sac_marker);
+    map.removeLayer(mathTower_marker);
+    map.removeLayer(wangCenter_marker);
+    map.removeLayer(library_marker);
+    map.removeLayer(lds_marker);
+    map.removeLayer(gls_marker);
+    map.removeLayer(tac_marker);
+    map.removeLayer(crc_marker);
+    map.removeLayer(staller_marker);
+    map.removeLayer(ncs_marker);
+    map.removeLayer(ess_marker);
+    map.removeLayer(harriman_marker);
+
+
+}
+
+// click select button
+function academic(){
+    mapInit();
+}
+function culture(){
+
+}
+function fraternity(){
+
+}
+function media(){
+
+}
+function performance(){
+
+}
+function activism(){
+
+}
+function religion(){
+
+}
+function leisure(){
+
+}
+function service(){
+
+}
+function sport(){
+
+}
+function select1(){
+
+}
+function select2(){
+
+}
+function select3(){
+
+}

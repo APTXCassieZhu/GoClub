@@ -87,7 +87,7 @@ public class Club {
 
     @Override
     public String toString() {
-        return "club{" +
+        return "Club{" +
                 " clubname='" + clubname + '\'' +
                 ", logopath='" + logopath + '\'' +
                 ", description='" + description + '\'' +
