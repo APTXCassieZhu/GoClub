@@ -2,30 +2,32 @@
     <head>
         <link rel="stylesheet" href="../css/style_login.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="../js/323register.js"></script>
     </head>
     <body>
         <div class="my-container-login"> 
-            <div class="my-wrap-login"> 
+            <div class="my-wrap-login" style="background-color:white; opacity:1"> 
                 <div class="my-login-logo">
-                    <!--<img src="img/sign_up.png">-->
-                    <h1>SignUp</h1>
+                    <img src="img/sign_up.png">
+                    <br>
                 </div>
-                <form action>
+                <form id="register" action>
                     <div class="my-wrap-login-input">
-                        <input type = "text" name = "ID" placeholder="ID" class="my-login-input"><br>
+                        <input type = "text" id="name" name = "username" placeholder="Username" class="my-login-input" required><br>
                     </div>
                     <div class="my-wrap-login-input">
-                        <input type = "password" name = "pwd" placeholder="Password" class="my-login-input"><br>
+                        <input type = "password" id="pwd" name = "pwd" placeholder="Password" class="my-login-input" required><br>
                     </div>
                     <div class="my-wrap-login-input">
-                        <input type = "password" name = "pwd" placeholder="Repeat Password" class="my-login-input"><br>
+                        <input type = "password" id="pwd2" name = "pwd_repeat" placeholder="Repeat Password" class="my-login-input" required><br>
                     </div>
-                    <div class="my-wrap-login-input">
-                        <input type = "text" name = "pwd" placeholder="Email" class="my-login-input"><br>
+                    <div class="my-container-login-btn">
+                        <input class="my-login-btn" type="submit" value="Sign Up" />
                     </div>
                 </form>
                 <div class="my-container-login-btn">
-                    <button onclick="window.location.href='login.html'" class="my-login-btn">Login </button>
+                    <button onclick="window.location.href='/login.html'" class="my-login-btn">Login </button>
                 </div>
             </div>
         </div>    

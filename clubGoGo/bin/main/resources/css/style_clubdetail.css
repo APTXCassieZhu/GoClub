@@ -1,0 +1,37 @@
+.clubtitle{
+    display: flow-root;
+    width: 70%;
+    margin: 3vw auto;
+}
+
+.detail-img{
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    float: left;
+}
+
+.clubtitle span{
+    margin-left: 3vw;
+    vertical-align: middle;
+    font-size: 4vw;
+}
+
+.favbtn{
+    margin-left: 3vw;
+    vertical-align: middle;
+    widows: 4vw;
+    height: 4vw;
+    cursor: pointer;
+}
+
+.description{
+    width: 70%;
+    margin: 1.5vw auto;
+    font-size: 1.5vw;
+}
+
+.description p{
+    font-size: 2vw;
+    font-weight: 400;
+}

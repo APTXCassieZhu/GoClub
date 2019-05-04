@@ -1,5 +1,6 @@
 function resultPage(page){
     var word = $.cookie('search_word');
+    document.getElementById("resultword").innerHTML = word;
     var selector = document.getElementById("category");
     var option = selector.options[selector.selectedIndex].value;
     var choice;

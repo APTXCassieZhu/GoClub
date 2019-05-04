@@ -12,6 +12,8 @@ import java.util.Optional;
 
 @Repository
 public interface ClubRepository extends CrudRepository<Club, String> {
+    
+    Optional<Club> findByUsername(String clubname);
 
     @Query(value = "SELECT * from Club c where c.clubname = :%clubname%", nativeQuery = true)
     List<Club> getClubByName(String clubname);
