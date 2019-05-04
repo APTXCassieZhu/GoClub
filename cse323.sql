@@ -14,10 +14,11 @@ CREATE TABLE Club (
     PRIMARY KEY (clubname) );
     
 CREATE TABLE Favorite (
+	favorite_id BIGINT,
 	username VARCHAR(255),
     clubname VARCHAR(255),
     follow_time DATETIME,
-    PRIMARY KEY (username, clubname),
+    PRIMARY KEY (favorite_id),
 	FOREIGN KEY (username) REFERENCES Clubuser (username)
 		ON DELETE NO ACTION
         ON UPDATE CASCADE,
