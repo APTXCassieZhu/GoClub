@@ -27,16 +27,14 @@
 
 
 <body>
-    <br name="jump">
-    <a href="#jump" class="viewjump">Back To Top</a>
     <div style="display:inline">
         <div class="result-info">
-            <span id="resultof">1-x Result of </span>
+            <span id="resultof">Result of </span>
             <span id="resultword" style="color:brown">xxxxx </span>
             <span >:</span>
         </div>
         <div id="search-type" style="display: flow-root;">
-            <select class="category" id="category" name="category" onchange = "searchPage(1);">
+            <select class="category" id="category" name="category" onchange = "resultPage(1);">
                 <option value=" ">Category</option>
                 <option value="Academic/Honor Society">Academic/Honor Society</option>
                 <option value="Cultural">Cultural</option>
@@ -83,7 +81,9 @@
                 </td>
             </tr>
         </table>
-
+        <div style="margin-left:50px;float: left;height:100%; font-size:30px; display: none;" id="resultEmpty">
+            <span>No Result Found...</span>
+        </div>
         <div class="pageTurn" style="text-align: center; font-size: 15px" id="divpage">
             <ul class="pagination" id="searchpageturn">
                 <li>1</li>
@@ -101,7 +101,7 @@
             document.getElementById("login_icon").style.display = "none";
             document.getElementById("logout_img").style.display = "none";
         }
-        resultPage(1);
+        showResult();
     </script>
 </body>
 </html>

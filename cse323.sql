@@ -7,8 +7,15 @@ CREATE TABLE Clubuser (
     PRIMARY KEY (username) );
     
 CREATE TABLE Club (
-    clubname VARCHAR(255) ,
-    clubdescription TEXT NOT NULL ,
+    clubname VARCHAR(768) ,
+    category TEXT ,
+    logopath TEXT ,
+    description TEXT ,
+    contact TEXT,
+    email VARCHAR(255),
+    event_location VARCHAR(255),
+    event_name VARCHAR(255),
+    event_time VARCHAR(255),
     #club INTEGER NOT NULL, #Number corresponds to which question VARCHAR(1000) NOT NULL,
     #security_answer VARCHAR(1000) NOT NULL,
     PRIMARY KEY (clubname) );
