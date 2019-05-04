@@ -29,6 +29,8 @@ public class AjaxProfileController {
             return 1;
         } else {
             // update new password in db
+            findUser.get().setPassword(newp);
+            userRepository.save(findUser.get());
             return 0;
         }
     }
