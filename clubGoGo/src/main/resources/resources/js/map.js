@@ -275,6 +275,7 @@ var ess_popup = "<b>Club event in Earth and Space Sciences</b>"+
 "<br>19:00 Room101 General Body Meeting@<a onclick=\"jumpToClub('Photography Club')\"><u>Photography Club</u></a>"+
 "<br>";
 var harriman_popup = "<b>Club event in Harriman Hall</b>"+
+"<br>15:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
 "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
 "<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
 "<br>19:00 Room105 Project Sunshine@<a onclick=\"jumpToClub('Project Sunshine')\"><u>Project Sunshine</u></a>"+
@@ -301,17 +302,17 @@ harriman_marker.bindPopup(harriman_popup).openPopup();
 
 // remove markers
 function mapInit() {
-    sac_marker.update(sac_popup);
-    wangCenter_marker.update(wangCenter_popup);
-    library_marker.update(library_popup);
-    lds_marker.update(lds_popup);
-    gls_marker.update(gls_popup);
-    tac_marker.update(tac_popup);
-    crc_marker.update(crc_popup);
-    staller_marker.update(staller_popup);
-    ncs_marker.update(ncs_popup);
-    ess_marker.update(ess_popup);
-    harriman_marker.update(harriman_popup); 
+    sac_marker.bindPopup(sac_popup);
+    wangCenter_marker.bindPopup(wangCenter_popup);
+    library_marker.bindPopup(library_popup);
+    lds_marker.bindPopup(lds_popup);
+    gls_marker.bindPopup(gls_popup);
+    tac_marker.bindPopup(tac_popup);
+    crc_marker.bindPopup(crc_popup);
+    staller_marker.bindPopup(staller_popup);
+    ncs_marker.bindPopup(ncs_popup);
+    ess_marker.bindPopup(ess_popup);
+    harriman_marker.bindPopup(harriman_popup); 
     map.removeLayer(sac_marker); 
     map.removeLayer(wangCenter_marker); 
     map.removeLayer(library_marker);
@@ -337,8 +338,8 @@ function academic(){
     var harriman_popup1 = "<b>Club event in Harriman Hall</b>"+
     "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
     "<br>"; 
-    ess_marker.update(ess_popup1);
-    harriman_marker.update(harriman_popup1);
+    ess_marker.bindPopup(ess_popup1).openPopup();
+    harriman_marker.bindPopup(harriman_popup1).openPopup();
 }
 function culture(){
     mapInit();
@@ -391,6 +392,11 @@ function sport(){
     mapInit();
     sac_marker.addTo(map);
 }
+
+function select0() {
+    mapInit();
+}
+
 function select1(){
     mapInit();
     sac_marker.addTo(map);
@@ -412,10 +418,10 @@ function select1(){
     var tac_popup1 = "<b>Club event in Tabler Activities Center</b>"+
     "<br>12:00 Chinese Drama Fair@<a onclick=\"jumpToClub('Chinese Association at Stony Brook')\"><u>Chinese Association at Stony Brook</u></a>"+
     "<br>";
-    sac_marker.update(sac_popup1);
-    tac_marker.update(tac_popup1);
-    wangCenter_marker.update(wangCenter_popup1);
-    gls_marker.update(gls_popup1);
+    sac_marker.bindPopup(sac_popup1).openPopup();
+    tac_marker.bindPopup(tac_popup1).openPopup();
+    wangCenter_marker.bindPopup(wangCenter_popup1).openPopup();
+    gls_marker.bindPopup(gls_popup1).openPopup();
 }
 function select2(){
     mapInit();
@@ -425,6 +431,38 @@ function select2(){
     crc_marker.addTo(map);
     sac_marker.addTo(map);
     library_marker.addTo(map);
+    var sac_popup2 = "<b>Club event in SAC</b>"+
+    "<br>17:00 Room304 General Body Meeting @<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
+    "<br>17:30 SEA Presents: Last Night Out@<a onclick=\"jumpToClub('Undergraduate Social Welfare Alliance')\"><u>Undergraduate Social Welfare Alliance</u></a>"+
+    "<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
+    "<br>18:30 Room304 Krispy Kreme Fundraiser@<a onclick=\"jumpToClub('Watsi')\"><u>Watsi</u></a>"+
+    "<br>";
+    var library_popup2 = "<b>Club event in Melville Library</b>"+
+    "<br>18:00 N5580 General Body Meeting@<a onclick=\"jumpToClub('Jewish Student Association')\"><u>Jewish Student Association</u></a>"+
+    "<br>18:30 N4006 Socialist Reading Group: What is to be Done? Burning Questions of Our Movement@<a onclick=\"jumpToClub('Young Democratic Socialists of Stony Brook University (Formerly Coalition of University Students for Progress or CUSP)')\"><u>Young Democratic Socialists of Stony Brook University (Formerly Coalition of University Students for Progress or CUSP)</u></a>"+
+    "<br>";
+    var gls_popup2 = "<b>Club event in GLS Center</b>"+
+    "<br>13:00 The Beauty Bar@<a onclick=\"jumpToClub('Hairitage')\"><u>Hairitage</u></a>"+
+    "<br>";
+    var crc_popup2 = "<b>Club event in Campus Recreational Center</b>"+
+    "<br>17:00 Belly Dance Workshop@<a onclick=\"jumpToClub('Belly Dance')\"><u>Belly Dance</u></a>"+
+    "<br>17:00 Practice@<a onclick=\"jumpToClub('Kumdo Club')\"><u>Kumdo Club</u></a>"+
+    "<br>";
+    var ncs_popup2 = "<b>Club event in New Computer Science</b>"+
+    "<br>15:00 General Body Meeting@<a onclick=\"jumpToClub('WPhD Computer Science')\"><u>WPhD Computer Science</u></a>"+
+    "<br>";
+    var ess_popup2 = "<b>Club event in Earth and Space Sciences</b>"+
+    "<br>17:00 General Body Meeting@<a onclick=\"jumpToClub('Earth and Planetary Science Club')\"><u>Earth and Planetary Science Club</u></a>"+
+    "<br>";
+    var harriman_popup2 = "<b>Club event in Harriman Hall</b>"+
+    "<br>15:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+    "<br>";
+    harriman_marker.bindPopup(harriman_popup2);
+    ess_marker.bindPopup(ess_popup2);
+    ncs_marker.bindPopup(ncs_popup2);
+    crc_marker.bindPopup(crc_popup2);
+    sac_marker.bindPopup(sac_popup2);
+    library_marker.bindPopup(library_popup2);
 }
 function select3(){
     mapInit();
@@ -435,4 +473,49 @@ function select3(){
     tac_marker.addTo(map);
     ess_marker.addTo(map);
     staller_marker.addTo(map);
+    var sac_popup3 = "<b>Club event in SAC</b>"+
+    "<br>19:00 BallroomA Casino Royale Semi-Formal@<a onclick=\"jumpToClub('Asian Students Alliance')\"><u>Asian Students Alliance</u></a>"+
+    "<br>19:00 Room306 Peking Duck Bao Night@<a onclick=\"jumpToClub('Cantonese Club')\"><u>Cantonese Club</u></a>"+
+    "<br>19:00 BallroomB JNight@<a onclick=\"jumpToClub('Japanese Student Organization')\"><u>Japanese Student Organization</u></a>"+
+    "<br>19:00 Room311 Capoeira Class@<a onclick=\"jumpToClub('Capoeira Club')\"><u>Capoeira Club</u></a>"+
+    "<br>20:00 Room302 General Body Meeting@<a onclick=\"jumpToClub('Carribean Student Organization')\"><u>Carribean Student Organization</u></a>"+
+    "<br>20:00 Room307 General Body Meeting@<a onclick=\"jumpToClub('SBU-TV')\"><u>SBU-TV</u></a>"+
+    "<br>21:00 Room305 Phi Iota Alpha Fraternity Movie Night@<a onclick=\"jumpToClub('MALK Fraternity, Inc.')\"><u>MALK Fraternity, Inc.</u></a>"+
+    "<br>";
+    var library_popup3 = "<b>Club event in Melville Library</b>"+
+    "<br>19:00 N3063 General Body Meeting@<a onclick=\"jumpToClub('The Play it Forward Project')\"><u>The Play it Forward Project</u></a>"+
+    "<br>19:00 E4320 General Body Meeting@<a onclick=\"jumpToClub('Peer Mental Health Alliance')\"><u>Peer Mental Health Alliance</u></a>"+
+    "<br>19:00 N5560 General Body Meeting@<a onclick=\"jumpToClub('Newman Club')\"><u>Newman Club</u></a>"+
+    "<br>";
+    var lds_popup3 = "<b>Club event in LDS Center</b>"+
+    "<br>19:00 General Body Meeting@<a onclick=\"jumpToClub('CASB Dance Team')\"><u>CASB Dance Team</u></a>"+
+    "<br>20:00 SAYAW@<a onclick=\"jumpToClub('Philippine United Student Organization')\"><u>Philippine United Student Organization</u></a>"+
+    "<br>";
+    var gls_popup3 = "<b>Club event in GLS Center</b>"+
+    "<br>19:00 Spirit of Saigon@<a onclick=\"jumpToClub('Vietnamese Student Association')\"><u>Vietnamese Student Association</u></a>"+
+    "<br>20:00 Kompa Night@<a onclick=\"jumpToClub('Haitian Student Organization')\"><u>Haitian Student Organization</u></a>"+
+    "<br>";
+    var tac_popup3 = "<b>Club event in Tabler Activities Center</b>"+
+    "<br>19:00 Spring Final Concert@<a onclick=\"jumpToClub('Vocalists')\"><u>Vocalists</u></a>"+
+    "<br>19:30 NPHC Open House@<a onclick=\"jumpToClub('National Pan-Hallenic Council')\"><u>National Pan-Hallenic Council</u></a>"+
+    "<br>20:00 Spring Invitational@<a onclick=\"jumpToClub('Stony Brook Pipettes')\"><u>Stony Brook Pipettes</u></a>"+
+    "<br>";
+    var staller_popup3 = "<b>Club event in Staller Center</b>"+
+    "<br>19:30 University Orchestra@<a onclick=\"jumpToClub('Stony Brook Broadway Orchestra')\"><u>Stony Brook Broadway Orchestra</u></a>"+
+    "<br>";
+    var ess_popup3 = "<b>Club event in Earth and Space Sciences</b>"+
+    "<br>19:00 Room101 General Body Meeting@<a onclick=\"jumpToClub('Photography Club')\"><u>Photography Club</u></a>"+
+    "<br>";
+    var harriman_popup3 = "<b>Club event in Harriman Hall</b>"+
+    "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+    "<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
+    "<br>19:00 Room105 Project Sunshine@<a onclick=\"jumpToClub('Project Sunshine')\"><u>Project Sunshine</u></a>"+
+    "<br>";
+    sac_marker.bindPopup(sac_popup3);
+    gls_marker.bindPopup(gls_popup3);
+    library_marker.bindPopup(library_popup3);
+    lds_marker.bindPopup(lds_popup3);
+    tac_marker.bindPopup(tac_popup3);
+    ess_marker.bindPopup(ess_popup3);
+    staller_marker.bindPopup(staller_popup3);
 }
