@@ -21,7 +21,7 @@ CREATE TABLE Club (
     PRIMARY KEY (clubname) );
     
 CREATE TABLE Favorite (
-	favorite_id BIGINT,
+	favorite_id BIGINT NOT NULL auto_increment,
 	username VARCHAR(255),
     clubname VARCHAR(255),
     follow_time DATETIME,

@@ -11,8 +11,6 @@ import java.util.List;
 @Repository
 public interface ClubRepository extends CrudRepository<Club, String> {
     
-    Optional<Club> findByUsername(String clubname);
-
     // @Query(value = "SELECT * from Club c where c.clubname like 'clubname'", nativeQuery = true)
     // List<Club> getClubByName(@Param("clubname") String clubname);
 

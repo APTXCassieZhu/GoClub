@@ -8,12 +8,13 @@ import javax.persistence.*;
 public class Favorite {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long favorite_id;
     private String username;
     private String clubname;
     private Date follow_time;
 
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long favorite_id;
+    
 
     public Favorite(){
 

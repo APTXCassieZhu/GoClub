@@ -22,17 +22,35 @@ function checkfavorite(){
     }
 }
 
-
 function showdetail(){
     checkfavorite();
     var clubname = $.cookie('clubname');
-    $.ajax({
-        url: "club.html/show",
-        type: "post",
-        async: false,
-        data: {club:clubname},
-        success: function (data) {
-            // update logo, name, decription, contact, event
+    $(window).ready(function() {
+        var info;
+        $.ajax({
+            url: "club.html/show",
+            type: "post",
+            async: false,
+            data: {club:clubname},
+            success: function (data) {
+                // update logo, name, decription, contact, event
+                info = jQuery.parseJSON(data);
+            }
+        });
+        document.getElementById("clublogo").src = info.path;
+        document.getElementById("clubname").innerText = info.clubname;
+        document.getElementById("description").innerText = info.des;
+        if(info.contact==null){
+            document.getElementById("contact").style.display = "none";
+        }else{            
+            document.getElementById("contact").style.display = "block";
+            document.getElementById("contactinfo").innerText = info.contact;
+        }
+        if(info.event==null){
+            document.getElementById("event").style.display = "none";
+        }else{            
+            document.getElementById("event").style.display = "block";
+            document.getElementById("eventinfo").innerText = info.event;
         }
     });
 }

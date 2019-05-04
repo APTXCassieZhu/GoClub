@@ -58,20 +58,16 @@ public class AjaxSearchController {
             }
         }
         Integer count = clubname.size();
-        JSONObject result = new JSONObject();
         if(pagenum*15>count){
             clubname = clubname.subList((pagenum-1)*15, count);
             path = path.subList((pagenum-1)*15, count);
             description = description.subList((pagenum-1)*15, count);
-            result.put("min", (pagenum-1)*15);
-            result.put("max", count);
         }else{
             clubname = clubname.subList((pagenum-1)*15, pagenum*15);
             path = path.subList((pagenum-1)*15, pagenum*15);
             description = description.subList((pagenum-1)*15, pagenum*15);
-            result.put("min", (pagenum-1)*15);
-            result.put("max", pagenum*15);
         }
+        JSONObject result = new JSONObject();
         result.put("clubname", clubname);
         result.put("path", path);
         result.put("des", description);

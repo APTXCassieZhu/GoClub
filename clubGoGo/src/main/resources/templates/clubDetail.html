@@ -32,8 +32,8 @@
         <span id="clubname">clubname</span>    
         <img id="favbtn" class="favbtn" onclick="favoriteList()" src="../img/star-empty.png">
     </div>
-    <div class="description" id="description">
-        <span>The mission of Alpha Eta Mu Beta is: 
+    <div class="description" >
+        <span id="description">The mission of Alpha Eta Mu Beta is: 
                 a. To encourage participation 
                in those activities that may be beneficial to the profession of 
                Biomedical Engineering/Bioengineering. 
@@ -52,11 +52,11 @@
     </div>
     <div class="description" id="contact">
         <p>Contact:  <button onclick=sendEmail() style="margin-left:3vw;" class="kwbtn kwbtn2" id="send-email-btn">Send Email</button></p>
-        <span> 100 Nichols Rd   Stony Brook,  NY 11790  United States  Contact Email E:  stonybrookhealthscience@gmail.com </span>
+        <span id="contactinfo"> 100 Nichols Rd   Stony Brook,  NY 11790  United States  Contact Email E:  stonybrookhealthscience@gmail.com </span>
     </div>
     <div class="description" id="event">
         <p>Upcoming Event:</p>
-        <span id="event"> Harriman 104, 15:00 General Body Meeting</span>
+        <span id="eventinfo"> Harriman 104, 15:00 General Body Meeting</span>
     </div>
 
     <script>
@@ -65,11 +65,10 @@
         if(username==""||username==undefined){
             document.getElementById("logout_icon").style.display = "none";
             document.getElementById("login_img").style.display = "none";
-            $('#send-email-btn').prop('disabled', true);
+            document.getElementById("send-email-btn").style.display = "none";
         }else{            
             document.getElementById("login_icon").style.display = "none";
             document.getElementById("logout_img").style.display = "none";
-            $('#send-email-btn').prop('disabled', false);
         }
         showdetail();
     </script>
