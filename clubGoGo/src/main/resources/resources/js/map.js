@@ -213,7 +213,7 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-    this._div.innerHTML = '<h4>SBU</h4>' +  (props ?
+    this._div.innerHTML = '<h4>SBU Club Event Map</h4>' +  (props ?
         '<b>Building Name: ' + props
         : 'Click your target building to view events in that building');
 };
@@ -259,36 +259,3 @@ ncs_marker.bindPopup(ncs_popup).openPopup();
 ess_marker.bindPopup(ess_popup).openPopup();
 harriman_marker.bindPopup(harriman_popup).openPopup();
 
-
-
-// highlight selected building
-/*var _mouseDownPoint = null;
-
-map.on("mousedown", onMouseDown);
-map.on("mouseup", onMouseUp);
-
-function onMouseDown(event) {
-    _mouseDownPoint = event.layerPoint;
-}
-
-function onMouseUp(event) {
-    var mouseUpPoint = event.layerPoint;
-    var mouseMoved = mouseUpPoint.distanceTo(_mouseDownPoint) > 5;
-
-    if (!mouseMoved) {
-        var result = map.buildings.findBuildingAtScreenPoint(event.layerPoint);
-        if (result.found) {
-            var buildingHighlight = L.Wrld.buildings.buildingHighlight(
-                L.Wrld.buildings.buildingHighlightOptions()
-                    .highlightBuildingAtScreenPoint(event.layerPoint)
-                    .color([255, 255, 0, 128])
-                )
-                .addTo(map);
-
-            setTimeout(function() {
-                buildingHighlight.remove();
-            }, 4000);
-        }
-
-    }
-}*/

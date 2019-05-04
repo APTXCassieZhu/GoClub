@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../css/style_button.css">
         <link rel="stylesheet" href="../css/style_upperbar.css">
         <link rel="stylesheet" href="../css/style_home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <header>
         <div class="topnav" style="text-align:center;">
@@ -30,10 +31,51 @@
     </header>
     <body>
         <div class="map-content">
+            <div class="select-category">
+                <button onclick="selectByCategory();" class="select-btn"><i class="fa fa-caret-down"></i>  Category</button>
+                <div id="c-DropDown" class="dropdown-content">
+                    <input onclick="academic()" type="button" value="Academic/Honor Society">
+                    <input onclick="culture()" type="button" value="Cultural">
+                    <input onclick="fraternity()" type="button" value="Fraternities/Sororities">
+                    <input onclick="media()" type="button" value="Media Organizations">
+                    <input onclick="performance()" type="button" value="Performance Organizations">
+                    <input onclick="activism()" type="button" value="Activism/Advocacy">
+                </div>
+            </div>
+            <div class="select-time">
+                <button onclick="selectByTime();" class="select-btn"><i class="fa fa-caret-down"></i>  Time</button>
+                <div id="t-DropDown" class="dropdown-content">
+                    <input onclick="select1()" type="button" value="After 1:00PM">
+                    <input onclick="select2()" type="button" value="After 3:00PM">
+                    <input onclick="select3()" type="button" value="After 5:00PM">
+                </div>
+            </div>
             <div id="map"></div>
             <script src = "../js/map.js"></script>
         </div>
     </body>
+    <script>
+        function selectByCategory() {
+            if(document.getElementById("c-DropDown").style.display=="none"){
+                document.getElementById("c-DropDown").style.display = "block";
+            }else{
+                document.getElementById("c-DropDown").style.display = "none";
+            }
+        }
+        function selectByTime() {
+            if(document.getElementById("t-DropDown").style.display=="none"){
+                document.getElementById("t-DropDown").style.display = "block";
+            }else{
+                document.getElementById("t-DropDown").style.display = "none";
+            }
+        }
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.select-btn')) {
+                document.getElementById("c-DropDown").style.display = "none";
+            }
+        }
+    </script>
     <script>
         var username = $.cookie('username');
         if(username==""||username==undefined){
