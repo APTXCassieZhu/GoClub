@@ -338,8 +338,8 @@ function academic(){
     var harriman_popup1 = "<b>Club event in Harriman Hall</b>"+
     "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
     "<br>"; 
-    ess_marker.bindPopup(ess_popup1).openPopup();
-    harriman_marker.bindPopup(harriman_popup1).openPopup();
+    ess_marker.bindPopup(ess_popup1);
+    harriman_marker.bindPopup(harriman_popup1);
 }
 function culture(){
     mapInit();
@@ -418,10 +418,10 @@ function select1(){
     var tac_popup1 = "<b>Club event in Tabler Activities Center</b>"+
     "<br>12:00 Chinese Drama Fair@<a onclick=\"jumpToClub('Chinese Association at Stony Brook')\"><u>Chinese Association at Stony Brook</u></a>"+
     "<br>";
-    sac_marker.bindPopup(sac_popup1).openPopup();
-    tac_marker.bindPopup(tac_popup1).openPopup();
-    wangCenter_marker.bindPopup(wangCenter_popup1).openPopup();
-    gls_marker.bindPopup(gls_popup1).openPopup();
+    sac_marker.bindPopup(sac_popup1);
+    tac_marker.bindPopup(tac_popup1);
+    wangCenter_marker.bindPopup(wangCenter_popup1);
+    gls_marker.bindPopup(gls_popup1);
 }
 function select2(){
     mapInit();
