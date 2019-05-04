@@ -11,15 +11,12 @@ function changepassword(){
     console.log(new2);
 
     if(new1==""){
-        console.log("111111111111");
         document.getElementById("change_error3").style.display = "table-row";
     }
     if(new1!=new2){
-        console.log("2222222222222222");
         document.getElementById("change_error2").style.display = "table-row";
     }
     if(new1==new2&&new1!=""){   
-        console.log("333333333333333333");
         console.log("username is:" + $.cookie('username'));
         $.ajax({
             url: "profile.html/change_password",
@@ -58,9 +55,6 @@ function favoritePage(page){
     }
     else if(option == "latest"){
         choice = "3";
-    }
-    else if(option == "event"){
-        choice = "4";
     }
     $.ajax({
         url: "profile.html/favorite",

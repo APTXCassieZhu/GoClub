@@ -35,3 +35,8 @@ function gosearchresult() {
 function sendEmail() {
     window.location.href="./contact.html";    
 }
+
+function goclubdetail(clubname){
+    $.cookie('clubname', clubname);
+    document.location.href="./clubDetail.html";
+}
