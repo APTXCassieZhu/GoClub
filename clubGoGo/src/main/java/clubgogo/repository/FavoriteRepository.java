@@ -8,8 +8,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
 
 @Repository
 public interface FavoriteRepository extends CrudRepository<Favorite, Integer> {
