@@ -272,7 +272,6 @@ var ncs_popup = "<b>Club event in New Computer Science</b>"+
 "<br>";
 var ess_popup = "<b>Club event in Earth and Space Sciences</b>"+
 "<br>17:00 General Body Meeting@<a onclick=\"jumpToClub('Earth and Planetary Science Club')\"><u>Earth and Planetary Science Club</u></a>"+
-"<br>19:00 Room101 General Body Meeting@<a onclick=\"jumpToClub('Photography Club')\"><u>Photography Club</u></a>"+
 "<br>";
 var harriman_popup = "<b>Club event in Harriman Hall</b>"+
 "<br>15:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
@@ -471,7 +470,6 @@ function select3(){
     library_marker.addTo(map);
     lds_marker.addTo(map);
     tac_marker.addTo(map);
-    ess_marker.addTo(map);
     staller_marker.addTo(map);
     var sac_popup3 = "<b>Club event in SAC</b>"+
     "<br>19:00 BallroomA Casino Royale Semi-Formal@<a onclick=\"jumpToClub('Asian Students Alliance')\"><u>Asian Students Alliance</u></a>"+
@@ -503,9 +501,6 @@ function select3(){
     var staller_popup3 = "<b>Club event in Staller Center</b>"+
     "<br>19:30 University Orchestra@<a onclick=\"jumpToClub('Stony Brook Broadway Orchestra')\"><u>Stony Brook Broadway Orchestra</u></a>"+
     "<br>";
-    var ess_popup3 = "<b>Club event in Earth and Space Sciences</b>"+
-    "<br>19:00 Room101 General Body Meeting@<a onclick=\"jumpToClub('Photography Club')\"><u>Photography Club</u></a>"+
-    "<br>";
     var harriman_popup3 = "<b>Club event in Harriman Hall</b>"+
     "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association1')\"><u>American Marketing Association1</u></a>"+
     "<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
@@ -516,6 +511,5 @@ function select3(){
     library_marker.bindPopup(library_popup3);
     lds_marker.bindPopup(lds_popup3);
     tac_marker.bindPopup(tac_popup3);
-    ess_marker.bindPopup(ess_popup3);
     staller_marker.bindPopup(staller_popup3);
 }
