@@ -276,7 +276,7 @@ var ess_popup = "<b>Club event in Earth and Space Sciences</b>"+
 "<br>";
 var harriman_popup = "<b>Club event in Harriman Hall</b>"+
 "<br>15:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
-"<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+"<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association1')\"><u>American Marketing Association1</u></a>"+
 "<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
 "<br>19:00 Room105 Project Sunshine@<a onclick=\"jumpToClub('Project Sunshine')\"><u>Project Sunshine</u></a>"+
 "<br>";
@@ -336,7 +336,7 @@ function academic(){
     "<br>17:00 General Body Meeting@<a onclick=\"jumpToClub('Earth and Planetary Science Club')\"><u>Earth and Planetary Science Club</u></a>"+
     "<br>";
     var harriman_popup1 = "<b>Club event in Harriman Hall</b>"+
-    "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+    "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association1')\"><u>American Marketing Association1</u></a>"+
     "<br>"; 
     ess_marker.bindPopup(ess_popup1);
     harriman_marker.bindPopup(harriman_popup1);
@@ -507,7 +507,7 @@ function select3(){
     "<br>19:00 Room101 General Body Meeting@<a onclick=\"jumpToClub('Photography Club')\"><u>Photography Club</u></a>"+
     "<br>";
     var harriman_popup3 = "<b>Club event in Harriman Hall</b>"+
-    "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association')\"><u>American Marketing Association</u></a>"+
+    "<br>19:00 Room104 General Body Meeting@<a onclick=\"jumpToClub('American Marketing Association1')\"><u>American Marketing Association1</u></a>"+
     "<br>19:00 Room243 General Body Meeting@<a onclick=\"jumpToClub('Stony Brook Chess Club')\"><u>Stony Brook Chess Club</u></a>"+
     "<br>19:00 Room105 Project Sunshine@<a onclick=\"jumpToClub('Project Sunshine')\"><u>Project Sunshine</u></a>"+
     "<br>";
