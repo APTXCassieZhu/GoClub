@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="../css/style_contact.css">
     <script src="../js/323jump_function.js"></script>
     <script src="../js/323js.cookie.js"></script>
-
+    <script src="../js/sendMail.js"></script>
+</head>
+<header>
     <div class="topnav" style="text-align:center;">
         <a onclick="gohome()">Home</a>
         <a onclick="goabout()">About</a>
@@ -23,7 +25,7 @@
         <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
         <input id="logout_img" type="image" class="user-icon user-icon1"  src="../img/profile.png" />
     </div>
-</head>
+</header>
 
 <body>
     <div class="my-container-contact">
@@ -32,16 +34,16 @@
                 <h1 class="contact-title">Contact Club Manager</h1>
                 <br>
                 <div class="my-wrap-contact-input">
-                    <input id="name" type = "text" name = "name" placeholder="Name" class="my-contact-input" required><br>
+                    <input id="name" type = "text" name = "name" placeholder="Your Name" class="my-contact-input" required><br>
                 </div>
                 <div class="my-wrap-contact-input">
-                    <input id="email" type = "text" name = "email" placeholder="Email address" class="my-contact-input" required><br>
+                    <input id="email" type = "email" name = "email" placeholder="Your Email address" class="my-contact-input" required><br>
                 </div>
                 <div class="my-wrap-contact-input">
                     <input id="subject" type = "text" name = "subject" placeholder="Subject" class="my-contact-input" required><br>
                 </div>
                 <div class="my-wrap-contact-input">
-                    <input id="content" type = "text" name = "content" placeholder="Content" class="my-contact-input email-content"><br>
+                    <textarea placeholder="Content" class="my-contact-input email-content"></textarea><br>
                 </div>
                 <div class="my-container-contact-btn">
                     <button class="kwbtn kwbtn2" type="submit">Send email </button>
@@ -55,11 +57,11 @@
         if(username==""||username==undefined){
             document.getElementById("logout_icon").style.display = "none";
             document.getElementById("login_img").style.display = "none";
+            window.location.href="/home.html";
         }else{            
             document.getElementById("login_icon").style.display = "none";
             document.getElementById("logout_img").style.display = "none";
         }
-        showdetail();
     </script>
 </body>
 </html>

@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    height: 100%;
     background-image: url("../img/323bg.png");
     background-size: cover;
 }
@@ -15,7 +16,8 @@ body{
     display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;flex-wrap:wrap;
     justify-content:center;
     align-items:center;
-    padding:15px;
+    padding-top:15px;
+    padding-bottom: 40px;
   }
 
   .my-wrap-contact {
@@ -64,7 +66,7 @@ body{
 }
 
 .email-content {
-    height: 300px;
+    height: 200px;
     overflow: auto;
-    text-align: center;
+    vertical-align: top;
 }
