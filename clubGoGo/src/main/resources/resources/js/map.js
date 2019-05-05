@@ -224,7 +224,7 @@ var sac_popup = "<b>Club event in SAC</b>"+
 "<br>12:30 Lobby Bake Sale@<a onclick=\"jumpToClub('SBU Junoon')\"><u>SBU Junoon</u></a>"+
 "<br>17:00 Room304 General Body Meeting @<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
 "<br>17:30 SEA Presents: Last Night Out@<a onclick=\"jumpToClub('Undergraduate Social Welfare Alliance')\"><u>Undergraduate Social Welfare Alliance</u></a>"+
-"<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
+"<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club1')\"><u>Buddhist Meditation Club1</u></a>"+
 "<br>18:30 Room304 Krispy Kreme Fundraiser@<a onclick=\"jumpToClub('Watsi')\"><u>Watsi</u></a>"+
 "<br>19:00 BallroomA Casino Royale Semi-Formal@<a onclick=\"jumpToClub('Asian Students Alliance')\"><u>Asian Students Alliance</u></a>"+
 "<br>19:00 Room306 Peking Duck Bao Night@<a onclick=\"jumpToClub('Cantonese Club')\"><u>Cantonese Club</u></a>"+
@@ -434,7 +434,7 @@ function select2(){
     var sac_popup2 = "<b>Club event in SAC</b>"+
     "<br>17:00 Room304 General Body Meeting @<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
     "<br>17:30 SEA Presents: Last Night Out@<a onclick=\"jumpToClub('Undergraduate Social Welfare Alliance')\"><u>Undergraduate Social Welfare Alliance</u></a>"+
-    "<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club')\"><u>Buddhist Meditation Club</u></a>"+
+    "<br>18:00 Room304 General Body Meeting@<a onclick=\"jumpToClub('Buddhist Meditation Club1')\"><u>Buddhist Meditation Club1</u></a>"+
     "<br>18:30 Room304 Krispy Kreme Fundraiser@<a onclick=\"jumpToClub('Watsi')\"><u>Watsi</u></a>"+
     "<br>";
     var library_popup2 = "<b>Club event in Melville Library</b>"+
