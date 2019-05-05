@@ -166,6 +166,7 @@
   width: 100%;
 }
 
-.favorite-table th{
+.favorite-table th,td{
   text-align: center;
+  font-size: 1.7vw;
 }

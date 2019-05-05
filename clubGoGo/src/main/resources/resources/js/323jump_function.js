@@ -40,3 +40,8 @@ function goclubdetail(clubname){
     $.cookie('clubname', clubname);
     document.location.href="./clubDetail.html";
 }
+
+function gocontact(clubname){
+    $.cookie('clubname', clubname);
+    window.location.href="./contact.html";  
+}

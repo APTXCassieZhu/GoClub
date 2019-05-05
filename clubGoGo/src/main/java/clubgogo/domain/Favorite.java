@@ -49,4 +49,16 @@ public class Favorite {
     public void setFollow_time(Date follow_time) {
         this.follow_time = follow_time;
     }
+
+    public String toString(){
+        return "Club{" +
+                " username='" + username + '\'' +
+                ", clubname='" + clubname + '\'' +
+                ", follow_time='" + follow_time + '\'' +
+                '}';
+    }
+
+    public int compareTo(Favorite f){
+        return this.getFollow_time().compareTo(f.getFollow_time());
+    }
 }

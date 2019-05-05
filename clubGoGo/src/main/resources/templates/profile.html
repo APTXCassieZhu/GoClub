@@ -108,7 +108,7 @@
             <select class="sortBy" id="sort-by" name="sort_by" onchange = "favoritePage(1);">
                 <option value="sortby">Sort By</option>
                 <option value="name">Name</option>
-                <option value="latest">Latest</option>
+                <!-- <option value="latest">Latest</option> -->
             </select>
         </div>
     </div>
@@ -132,6 +132,9 @@
                 </th>
             </tr>
         </table>
+        <div style="float: left;height:100%; font-size:30px; display: none;" id="resultEmpty">
+            <span>No Result Found...</span>
+        </div>
         <div class="pageTurn" style="text-align: center; font-size: 15px" id="divpage">
             <ul class="pagination" id="favoritepageturn">
                 <li>1</li>
@@ -146,6 +149,7 @@
             document.location.href="./home.html";
         }
         showfavorite();
+
     </script>
 </div>
 
