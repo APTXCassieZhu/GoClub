@@ -45,4 +45,9 @@ public class mainController {
     String clubDetail(){
         return "clubDetail";
     }
+
+    @RequestMapping(value={"about.html"})
+    String about(){
+        return "about";
+    }
 }

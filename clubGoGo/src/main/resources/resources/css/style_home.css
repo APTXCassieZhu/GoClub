@@ -86,4 +86,8 @@
     width: 300px;
   }
 
+  .leaflet-popup-content-wrapper a{
+    cursor: pointer;
+  }
+
 /* map style end */

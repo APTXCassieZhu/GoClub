@@ -20,6 +20,7 @@ function gologout(){
 
 function goabout(){
     $.cookie('clubname', "");
+    window.location.href="./about.html";
 }
 
 function gosearchresult() {

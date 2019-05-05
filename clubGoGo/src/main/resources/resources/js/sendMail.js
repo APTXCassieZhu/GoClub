@@ -19,6 +19,6 @@ $(document).ready(function(){
                         +"\'s manager.") ;
                 }
             });
-        }, 3000);
+        }, 2000);
     });
 });

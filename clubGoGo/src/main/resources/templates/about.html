@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <title>About</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">   
+    <link rel="stylesheet" href="../css/style_upperbar.css">
+    <link rel="stylesheet" href="../css/style_button.css">
+    <link rel="stylesheet" href="../css/style_contact.css">
+    <script src="../js/323jump_function.js"></script>
+    <script src="../js/323js.cookie.js"></script>
+</head>
+<header>
+    <div class="topnav" style="text-align:center;">
+        <a onclick="gohome()">Home</a>
+        <a onclick="goabout()">About</a>
+        <input type="text" class="search_bar" style="font-size:15px;border:none;border-bottom:2px solid beige;background:transparent;color: white;" name="search_word" id="search_word" size="35" placeholder="Search more clubs...">
+        <input type="image" src = "../img/search.png" class="search-img" onclick="gosearchresult()"/>
+        <span id="login_icon" onclick="gologin()" class="glyphicon glyphicon-log-in user-icon" style="font-size: 43px;border-radius: 50%;"></span>
+        <span id="logout_icon" onclick="gologout()" class="glyphicon glyphicon-log-out user-icon" style="font-size: 43px;border-radius: 50%;"></span>
+        <input id="login_img" onclick="goprofile()" type="image" class="user-icon user-icon1"  src="../img/wolfie.png" />
+        <input id="logout_img" type="image" class="user-icon user-icon1"  src="../img/profile.png" />
+    </div>
+</header>
+
+<body>
+    <div class="my-container-contact">
+        <div class="my-wrap-contact" style="width:800px"> 
+            <h1 class="contact-title">ClubGoGo</h1>
+            <p>This app is developed for the freshman, who want to make new friends and know little about Stony Brook clubs. 
+                In the app, users can click the SBU map to check out the details of clubs in the building user clicked. 
+                Also, user can search a club by keywords that they might be interested, such as boxing club, chess club and Chinese culture club. 
+                The goal of the app is to help students new to the school be more engaged and enjoy their college time by joining club activities.</p>
+        </div>
+    </div>
+   
+    <script>
+        var username = $.cookie('username');
+        if(username==""||username==undefined){
+            document.getElementById("logout_icon").style.display = "none";
+            document.getElementById("login_img").style.display = "none";
+            window.location.href="/home.html";
+        }else{            
+            document.getElementById("login_icon").style.display = "none";
+            document.getElementById("logout_img").style.display = "none";
+        }
+    </script>
+</body>
+</html>
