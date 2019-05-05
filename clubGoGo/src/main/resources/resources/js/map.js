@@ -283,7 +283,7 @@ var harriman_popup = "<b>Club event in Harriman Hall</b>"+
 function jumpToClub(str){
     console.log(str);
     $.cookie('clubname', str);
-    window.location.href="/clubDetail.html";
+    document.location.href="/clubDetail.html";
 }
 
 // add club event into map
